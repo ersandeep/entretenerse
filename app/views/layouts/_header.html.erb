@@ -1,0 +1,93 @@
+<div id="header">
+    <div id="firstbar">
+        <div class="columnleft" id="titlebox">
+          <a href="/">
+            <%=image_tag "logo.gif", :id => 'logo', :size => '130x50' %>
+          </a>
+          <h1>
+            @ <span id="change-location-label">Buenos Aires</span>
+          </h1>
+        </div>
+        <div class="columnleft" id="searchbox">
+          <div class="yui-skin-sam">
+            <div id="searchdiv">
+              <span id="searchspan">
+                <input id="searchfield" class="hint" type="text" name="searchfield" title="<%=t :search_tip%>">
+                <span class="yui-button yui-push-button yui-button-disabled yui-push-button-disabled" id="searchbutton">
+                  <span class="first-child">
+                    <button type="button" tabindex="0" id="searchbutton-button" disabled="disabled">
+                      Search
+                    </button>
+                  </span>
+                </span>
+              </span>
+              <ul id="searchoptions">
+                <li id="searchoptionslabel">
+                  <span id="show_search_options"><%=t :show_searchoptions %></span>
+                  <span id="hide_search_options" style="display:none;"><%=t :hide_searchoptions %></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="columnright" id="loginbox">
+            <div id="clickpassbox">
+            <% if current_user %>
+                <div id="logout">
+                    <div style="white-space: nowrap">
+                      <%=t :welcome%> <%= current_user.firstName + " " + current_user.lastName %>!
+                    </div>
+                </div>
+            <% else %>
+              <!--
+              <iframe id="clickpassIframe"
+                src="http://www.clickpass.com/embedded_buttons/login-standard/<%=ConsumerController::SITE_KEY %>" 
+                width="176"
+                height="28" 
+                frameborder="0"
+                allowtransparency="true"
+                scrolling="no"></iframe>
+              -->
+            <% end %>
+            </div>
+        </div>
+    </div>
+    <div id="secondbar">
+        <div id="titlebarinferior">
+            <a id="titlebarhome" title="<%=t :cleanallthismess %>" href='/'>
+              <%=t :titlebarhome %>
+            </a>
+            <div id="titlebarcontainer">
+              <% unless @category.blank? %>
+                <% @category.parent_chain.reverse.each do |category| %>
+                  <span class="titlebarcat">
+                    <span class="value"><%=h category.value %></span>
+                    <span class="remove">&nbsp;</span>
+                  </span>
+                <% end %>
+              <% end %>
+            </div>
+        </div>
+    </div>
+    <div id="thirdbar">
+      <div id="refineby"><%=t :refine_by %></div>
+      <div id="categories" class="hidden">
+        <%= render :partial => 'layouts/category', :collection => @categories %>
+        <div class='clear'></div>
+      </div>
+      <div class="switch_view">
+        <a id="switch_to_calendar_view" href="#" <%= 'style="display:none;"'.html_safe if params[:view] != 'category' %> >
+          <%=t :switchview_sort_date %>
+        </a>
+        <a id="switch_to_category_view" href="#" <%= 'style="display:none;"'.html_safe if params[:view] == 'category' %> >
+          <%=t :switchview_sort_category %>
+        </a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <noscript>
+      <div id="turn_on_javascript">
+        <%=t :turn_on_javascript %>
+      </div>
+    </noscript>
+</div>

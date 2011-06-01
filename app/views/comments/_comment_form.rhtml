@@ -1,0 +1,20 @@
+<h5><%= t :header, :scope => [:comments] %></h5>
+<% if current_user %>
+  <% form_for :comment, :url=>{:controller=>"comments", :action=>"add_comment", :id=>model.id }, :remote => true do |f| %>
+    <%= text_area 'comment', 'comment', :rows=>5, :cols=>35 , :class=>'commentbox' %><br>
+
+    <br />
+    <%= submit_tag t :publish_button, :scope => [:comments] %>
+
+    <%= hidden_field 'commentable', 'commentable', :value => model.class %>
+    <%= hidden_field 'commentable', 'commentable_id', :value => model.id %>
+  <% end %>
+<% else %>
+  <%= t :message_login, :scope => [:comments] %>
+<% end %>
+<hr/>
+<div id="comments">
+<% model.comments.each do |comment|%>
+  <%= render :partial => "comments/comment.rhtml", :locals => {:comment => comment } %>
+<% end %>
+</div>

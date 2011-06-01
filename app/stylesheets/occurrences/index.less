@@ -1,0 +1,161 @@
+#occurrences_list {
+    #occurrences_title {
+        height: 29px;
+        margin: 9px 0;
+        overflow: hidden;
+
+        h3 {
+            color: #666666;
+            display: inline;
+            float: left;
+            font-size: 138.5%;
+            font-weight: bold;
+            line-height: 34px;
+            margin: 0;
+        }
+    }
+
+    #occurrences_container {
+        height: 600px;
+        position: relative;
+        background: url("gradient.png") repeat-x scroll left top #F4F5F5;
+        border: 1px solid #CCCCCC;
+
+        .scrollable {
+            width: 99%; /* due to IE 7 sizing */
+            height: 100%;
+            position: relative;
+            padding: 0 3px;
+
+            #carousel-container {
+                margin-left: 80px;
+
+                .entrycol {
+                    padding: 10px;
+
+                    .entry {
+                        overflow: hidden;
+
+                        .title {
+                            cursor: pointer;
+                            font-size:93%;
+                            width: 2000px;
+                            line-height:18px;
+                        }
+
+                        .date {
+                            background: url(calendar.png) no-repeat scroll;
+                            color:#666666;
+                            font-size:116%;
+                            font-weight:bold;
+                            line-height:36px;
+                            padding-left:36px;
+                        }
+
+                        .content{
+                            color: #666666;
+                            font-size: 85%;
+                            white-space: nowrap;
+
+                            .subheader {
+                                margin-left: 20px;
+                                overflow:hidden;
+                                width:10000px;
+                            }
+
+                            .image {
+                                width: 93px;
+                                height: 93px;
+                                text-align: center;
+                                border: 1px solid #CCCCCC;
+                                margin: auto;
+                                img {
+                                    width: 89px;
+                                    padding: 2px;
+                                }
+                            }
+                        }
+
+                        .d1 { background-position: 0 0; }
+                        .d2 { background-position: 0 -42px; }
+                        .d3 { background-position: 0 -84px; }
+                        .d4 { background-position: 0 -126px; }
+                        .d5 { background-position: 0 -168px; }
+                        .d6 { background-position: 0 -210px; }
+                        .d7 { background-position: 0 -252px; }
+                        .d8 { background-position: 0 -294px; }
+                        .d9 { background-position: 0 -336px; }
+                        .d10 { background-position: 0 -378px; }
+                        .d11 { background-position: 0 -420px; }
+                        .d12 { background-position: 0 -462px; }
+                        .d13 { background-position: 0 -504px; }
+                        .d14 { background-position: 0 -546px; }
+                        .d15 { background-position: 0 -588px; }
+                        .d16 { background-position: 0 -630px; }
+                        .d17 { background-position: 0 -672px; }
+                        .d18 { background-position: 0 -714px; }
+                        .d19 { background-position: 0 -756px; }
+                        .d20 { background-position: 0 -798px; }
+                        .d21 { background-position: 0 -840px; }
+                        .d22 { background-position: 0 -882px; }
+                        .d23 { background-position: 0 -924px; }
+                        .d24 { background-position: 0 -966px; }
+                        .d25 { background-position: 0 -1008px; }
+                        .d26 { background-position: 0 -1050px; }
+                        .d27 { background-position: 0 -1092px; }
+                        .d28 { background-position: 0 -1134px; }
+                        .d29 { background-position: 0 -1176px; }
+                        .d30 { background-position: 0 -1218px; }
+                        .d31 { background-position: 0 -1260px; }
+
+                        .time {
+                            background-color:#CCCCCC;
+                            color:#666666;
+                            font-size:85%;
+                            font-weight:bold;
+                            margin-bottom: 3px;
+                            text-align:center;
+                            border-radius: 9px;
+                            -moz-border-radius: 9px;
+                            -webkit-border-radius: 9px;
+                        }
+
+                        .time.started {
+                            color:#C17878;
+                        }
+
+                        .category {
+                            color:#666666;
+                            font-size:116%;
+                            font-weight:bold;
+                            line-height:36px;
+                            margin: 0 0 10px 0;
+                            padding-left:36px;
+                            background: url("icons-med.png") no-repeat scroll;
+                            float: none;
+                        }
+
+                        .category.cine       { background-position: 0 0px; }
+                        .category.teatro     { background-position: 0 -42px; }
+                        .category.tv         { background-position: 0 -84px; }
+                        .category.recitales  { background-position: 0 -126px; }
+                        .category.sport      { background-position: 0 -168px; }
+                        .category.culture    { background-position: 0 -210px; }
+                        .category.special    { background-position: 0 -252px; }
+
+                        .char {
+                            border-bottom: 1px dotted #CCCCCC;
+                            color:#666666;
+                            font-size:85%;
+                            font-weight:bold;
+                            line-height:18px;
+                        }
+                    }
+                }
+
+                .entrycol.selected { background:none repeat scroll 0 0 #EDF3DA; }
+            }
+        }
+    }
+
+}

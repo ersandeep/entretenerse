@@ -1,0 +1,42 @@
+<div id="occurrences_list">
+  <input type="hidden" id="page_title" value="<%=t :site %>! - v0.2.1" />
+  <input type="hidden" id="page_description" value="Calendario de eventos de Buenos Aires por dia y hora - Teatros, cines, recitales y fiestas." />
+  <div id="occurrences_title">
+    <h3><%=title %></h3>
+  </div>
+  <div id="occurrences_container">
+    <%=link_to "", 
+      params.merge({ :offset => 0 }), 
+      :id => 'view-button-prev-img', 
+      :style => 'height:80%;left:22.75px;',
+      :rel => 'paging' %>
+    <%=link_to "", 
+      params.merge({ :offset => @offset + (@count || 0) }),
+      :id => 'view-button-next-img', 
+      :style => 'height:80%;right:22.75px;',
+      :rel => 'paging'%>
+    <div class='scrollable'>
+      <% if @columns.blank? %>
+        <div id='viewzeroevents'>
+          <div style="display: table-cell; vertical-align: middle;">
+            <%=t :zeroevents %>
+          </div>
+        </div>
+      <% else %>
+        <ul id="carousel-container" style="width:<%= @columns.length * 190 %>px">
+          <%= render :partial => 'column', :collection => @columns %>
+        </ul>
+      <% end %>
+    </div>
+    <div id="carouselbar" style="width: 99.8%;">
+      <div id="carouselbarbox">
+        <div id="carouselbarcontainer" clickeable="bar"> 
+        </div>
+      </div>
+      <div class="tooltip"></div>
+      <div id="carouselbarpaginatorbuttonforward" overable="button"></div>
+      <div id="carouselbarpaginatorbuttonbackward" overable="button"></div>
+    </div>
+  </div>
+</div>
+<div id="event_placeholder"></div>

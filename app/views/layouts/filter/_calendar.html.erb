@@ -1,0 +1,31 @@
+<div id="date-filter">
+    <h4 style='text-align:left'>
+      <em>&#9658;</em> 
+      <%= t :filter_date%>
+    </h4>
+    <div id="filter-days">
+      <%=link_to t(:filter_calendar_hint_1),
+        url_for(params.merge({ :date => 'today' })),
+        :class => 'filter-days-item first',
+        :"data-date" => 'today'%>
+      <%=link_to t(:filter_calendar_hint_2),
+        url_for(params.merge({ :date => 'tomorrow' })),
+        :class => 'filter-days-item',
+        :"data-date" => 'tomorrow' %>
+      <%=link_to t(:filter_calendar_hint_3),
+        url_for(params.merge({ :date => 'week' })),
+        :class => 'filter-days-item',
+        :"data-date" => 'week' %>
+      <%=link_to t(:filter_calendar_hint_4),
+        url_for(params.merge({ :date => 'weekend' })),
+        :class => 'filter-days-item',
+        :"data-date" => 'weekend' %>
+      <%=link_to t(:filter_calendar_hint_5),
+        url_for(params.merge({ :date => 'month' })),
+        :class => 'filter-days-item last',
+        :"data-date" => 'month'  %>
+    </div>
+  <div id="filter-calendar-container"></div>
+</div><!-- end filtercalendarbox-->
+
+

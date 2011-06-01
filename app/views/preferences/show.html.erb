@@ -1,0 +1,13 @@
+<p>
+  <b>Rank:</b>
+  <%=h @preference.rank %>
+</p>
+
+<p>
+  <b>Attribute:</b>
+  <%=h @preference.attribute %>
+</p>
+
+
+<%= link_to 'Edit', edit_preference_path(@preference) %> |
+<%= link_to 'Back', preferences_path %>

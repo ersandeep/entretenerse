@@ -1,0 +1,20 @@
+<h1>Editing preference</h1>
+
+<% form_for(@preference) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :rank %><br />
+    <%= f.text_field :rank %>
+  </p>
+  <p>
+    <%= f.label :attribute %><br />
+    <%= f.text_field :attribute %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @preference %> |
+<%= link_to 'Back', preferences_path %>

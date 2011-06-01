@@ -1,0 +1,6 @@
+xml = parent_xml unless parent_xml.nil?
+xml.occurrence {
+  xml.id(occurrence.id)
+  xml.date(occurrence.date)
+  xml.hour(occurrence.hour.to_time.strftime('%H:%M'))
+}

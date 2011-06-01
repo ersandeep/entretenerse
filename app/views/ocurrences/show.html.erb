@@ -1,0 +1,28 @@
+<p>
+  <b>Date:</b>
+  <%=h @ocurrence.date %>
+</p>
+
+<p>
+  <b>Dayofweek:</b>
+  <%=h @ocurrence.dayOfWeek %>
+</p>
+
+<p>
+  <b>Repeat:</b>
+  <%=h @ocurrence.repeat %>
+</p>
+
+<p>
+  <b>From:</b>
+  <%=h @ocurrence.from %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%=h @ocurrence.to %>
+</p>
+
+
+<%= link_to 'Edit', edit_ocurrence_path(@ocurrence) %> |
+<%= link_to 'Back', ocurrences_path %>

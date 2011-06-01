@@ -1,0 +1,167 @@
+html{
+	background: #F4F5F5;
+}
+#eventdetailbox {text-align: left;
+background: #F4F5F5;
+}
+
+
+
+#eventdetailbox div.title {
+    padding: 3px 0 9px 0;
+} 
+
+#eventdetailbox div.title h2 {
+    color: #096BB3;
+    font-weight: normal;
+    font-size: 161.6%;
+    margin: 0 0 3px 0;
+} 
+
+#eventdetailbox div.title div.date {
+    color: #333;
+    font-weight: normal;
+    font-size: 93%;
+} 
+
+#eventdetailbox div.title div.venue {
+    color: #333;
+    font-weight: normal;
+    font-size: 93%;
+} 
+
+#eventdetailbox div.title div span a {
+    color: #666666;
+    cursor: pointer;
+} 
+
+#eventdetailbox div.title div span:hover {
+    text-decoration: underline;
+    color: #F0B962;
+} 
+
+#eventdetailbox div.description {
+    margin: 3px 0 9px 0;
+    color: #666666;
+    overflow: hidden;
+} 
+
+#eventdetailbox div.description div.ima {
+    float: left;
+    margin: 3px 9px 3px 3px;
+} 
+
+#eventdetailbox div.description div.ima img {
+    padding: 2px;
+	border:1px solid #CCCCCC; 
+    margin: auto;
+}
+
+#eventdetailbox h4 {
+    color: #666;
+    font-weight: bold;
+    font-size: 123.1%;
+    margin: 3px 0 9px 0;
+} 
+
+#eventdetailbox h4.green {
+    color: #89B31F;
+    font-weight: bold;
+    font-size: 123.1%;
+    margin: 3px 0 9px 0;	
+} 
+
+#eventdetailbox .container2 {
+    overflow: hidden;
+	width: 100%;
+} 
+
+#eventdetailbox .container {
+    clear: left;
+    overflow: hidden;
+} 
+
+#eventdetailbox .container .col1,
+#eventdetailbox .container .col2 {
+    float: left;
+    width: 43%;
+    margin-left: 9px;
+    color: #666;
+} 
+
+#eventdetailbox .container .col2
+{
+	width: 50%;
+}
+#occurrencesbox {
+	overflow: auto;
+}
+
+#eventdetailbox ul {
+    margin-left: 0;
+} 
+
+#eventdetailbox ul li {
+    list-style: none
+} 
+
+#eventdetailbox ul li h5 {
+    color: #666;
+} 
+
+#eventdetailbox ul li p {
+    font-size: 85%;
+} 
+
+#eventdetailbox .container .col2 p {
+    font-size: 93%;
+    font-style: italic;
+}
+
+#eventdetailbox .container .col2 {
+}
+
+#disqusbox h4 {
+	color: #89B31F;
+}
+
+
+#disqusbox form {
+	margin:auto;
+}
+
+#disqusbox form input {
+	margin-left:45%;
+	width:10%;
+	margin-top:1em;
+}
+
+#comment_comment {width:100%}
+.comments {}
+.commentdiv {    background: #EEEEEE url(gradient-bottom.png) repeat-x scroll left bottom;
+    border: 1px solid #CCCCCC;
+    padding: 3px;
+	margin-bottom:1em;
+	}
+.commentdiv .headline {background: transparent url(system-users.png) left center no-repeat; }	
+.commentdiv .headline .user {padding-left:38px; font-weight:bold; line-height:32px;}
+.commentdiv .headline .dark_header {padding:0 6px;font-weight:normal; line-height:32px;}
+
+.commentdiv .comment {
+	    font-size: 93%;
+    font-style: italic;
+	margin-top:0.5em;
+	padding-left:38px; 
+}
+
+#outbrainbox h4 {
+	color: #89B31F;
+}
+
+#dsq-content h3 {
+	display:none;
+}
+
+#dsq-popup-message {
+	top: 0px;
+}

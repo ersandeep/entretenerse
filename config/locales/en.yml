@@ -1,0 +1,202 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+    hello: "Hello world"
+    
+    or: or
+    site: "Entretenerse"
+    turn_on_javascript: "The site works best with javascript turned on."
+    loading: "Loading, please wait..."
+    loading_too_long: "Ups! Seems that the page is taking too much to load."
+    welcome : "Welcome"
+    search_tip : "Movies, Music shows, Soccer..."
+    filters: "Filters"
+    filters_tooltip: "Press to hide panel."
+    filter_date: "by Date"
+    filter_misc: "Misc"      
+    as_exp: "For ex:"
+
+    back: "< Back"
+    today: "Today"
+    tomorrow: "Tomorrow"
+    weekend: "This Weekend"
+    week: "This Week"
+    month: "This Month"
+    customhint: "Other Date"
+    next_week: "Next Week"
+    at: "at"
+
+    refine_by: "Refine by:"
+    
+    filter_calendar_hint_1: "TDAY"
+    filter_calendar_hint_2: "TOMO"
+    filter_calendar_hint_3: "WEEK"
+    filter_calendar_hint_4: "WKND"
+    filter_calendar_hint_5: "MNTH"
+    
+    filter_time: "by Hour"
+    also_in: "Also in BA!"
+    sponsors: "Sponsors"
+    credits: "Credits"
+    publicity: "Advertising"
+    
+    results: "Results"
+    results_of: "of"
+    preferedlabelprefix: "in"
+    preferedlabel: "Prefered Categories"
+    show_others: "More..."
+    hide_others: "Less..."
+    zeroevents: "No results found! Try a better search"    
+    order_by_horario: "Order by Hour"
+    order_by_horario_min: "by Hour"
+    order_by_rating: "Order by Ranking"
+    order_by_rating_min: "by Ranking"
+    order_by_category: "Order by Category"
+    order_by_category_min: "by Category"
+
+    switchview_sort_date: "Switch to Calendar View"
+    switchview_sort_category: "Switch to Category View" 
+
+    
+    date_fromto: ", {{dateFrom}} to {{dateTo}}"
+    date_of: "of"
+
+    show_older: "Show Already-Started Events"
+    hide_older: "Hide Already-Started Events"
+    label_older: "Already started..."
+
+    next: "Next >"
+    admin:
+        categories:
+            select_one: Select category at top to edit it.
+
+
+    comments:
+        title: Title
+        text: Comment
+        publish_button: Publish
+        header: Deja tu comentario
+        message_login: You must login to publish comments 
+
+    button_save: "Save"
+    button_cancel: "Cancel"
+    button_search: "Search"
+    button_switch: "Show Search Assistant"
+    show_searchoptions: "Show Search Assistant"
+    hide_searchoptions: "Hide Search Assistant"
+    wizardclose: "Close this"
+    
+    preferences: "Preferences"
+    options_all: "All"
+    activate_all: "Activate"
+    deactivate_all: "Inactive"
+    disallow_all: "Suppress"
+    preferences_show: "Show preferences"
+    edit_preferences: "Edit Preferences"
+    cat_in_limbo: "Categories in Limbo"
+    
+    titlebarhome: "Home"
+    cleanallthismess: "Clean up all this mess and start over"
+        
+    rating_1: "Bad"
+    rating_2: "Boring"
+    rating_3: "Good"
+    rating_4: "Very good"
+    rating_5: "Excellent"
+
+    error_loading: "Ups! An Unexpected error has occurred."
+    error_retry: "Wait some time and try again" 
+    error_101: "Error loading preferences"
+    error_102: "Error loading filters menu"
+    error_103: "Error loading random events"
+    error_104: "Error loading events count"
+    error_105: "Error loading events"
+    error_106: "Error loading event detail"
+    error_107: "Error loading calendar"
+    error_108: "Error saving preferences"
+    error_109: "Error loading filter wizard"
+
+    text_credits: "<h2>Credits</h2><p><h3>ENTRETENERSE.COM.AR</h3><h4>Lic. Pablo Yabo</h4>PROJECT LEADER<br/><h4>Sebasti&aacute;n Ra&uacute;l Wain</h4>GENERAL IDEA, MARKET RESEARCH, DESIGN, DEVELOPMENT<br/><h4>Ing. Ariel Yabo</h4>MARKETING Y PROMOTION<br/><h4>7puentes.com</h4>WEB DESIGN, VISUALIZATION<br/><br/>Todas las marcas registradas que se mencionan en este sitio Web son propiedad de sus respectivos due&ntilde;os. Esta p&aacute;gina puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se cite la fuente completa y su direcci&oacute;n electr&oacute;nica (C) 2010 Entretenerse.com.ar"
+    text_sponsors: "<h2>Information for Sponsors</h2><p>Talk with...</p>"
+
+    event_detail: "Event details"
+    event_description: "Description"
+    event_duration: "Duration {{duration}} min."
+    event_place: "Where"
+    event_hours: "When"
+    event_sponsored: "Sponsored Event"
+    event_other_places: "View other shows"
+    event_other_shows: "Other shows"
+    event_rating: "Rating"
+    event_comments: "Comments"
+    event_disqus_offline: "View the discussion thread."
+    
+    options: "General Options"
+    options_refresh: "Refresh view"
+    
+    category_show_this: "Show this category"
+    category_show_only_this: "Show only this category"
+    category_hide_this: "Send this category to the limbo"
+    category_menu: "See this category options"
+    gohome: "Clean up all this mess and go home"
+    cleanquery: "Clean up this query"
+    cleancat: "Clean up this category"
+    
+    filter_by: "Filter by "
+    filter_all: "All"
+    filter_none: "None"
+    
+    price_free: "Free"
+    time_past: "ago"
+
+    navigation:
+      default:                  # The name of your navigation menu
+        home:                   # The name of your tab
+          title: "Home"         # The title of your tab
+          menus:
+            index: "Dashboard"  # The title for index action menu
+            new: "New Page"     # The title for new action menu
+    navigation:
+      nektra:                  # The name of your navigation menu
+        users:                   # The name of your tab
+          title: "Users"         # The title of your tab
+        preferences:                   # The name of your tab
+          title: "User Preferences"         # The title of your tab
+        campaign_types:                   # The name of your tab
+          title: "Campaign Types"         # The title of your tab
+        sponsors:                   # The name of your tab
+          title: "Event Sponsors"         # The title of your tab
+        tags:                   # The name of your tab
+          title: "Event Tags"         # The title of your tab
+        targets:                   # The name of your tab
+          title: "Targets"         # The title of your tab
+        attributes:                   # The name of your tab
+          title: "Attribute"         # The title of your tab
+        events:                   # The name of your tab
+          title: "Events"         # The title of your tab
+        performers:                   # The name of your tab
+          title: "Performers"         # The title of your tab
+        places:                   # The name of your tab
+          title: "Places"         # The title of your tab
+        calendars:                   # The name of your tab
+          title: "Holidays"         # The title of your tab
+      default:                  # The name of your navigation menu
+        users:                   # The name of your tab
+          title: "Users"         # The title of your tab
+        preferences:                   # The name of your tab
+          title: "User Preferences"         # The title of your tab
+        campaign_types:                   # The name of your tab
+          title: "Campaign Types"         # The title of your tab
+        sponsors:                   # The name of your tab
+          title: "Event Sponsors"         # The title of your tab
+        tags:                   # The name of your tab
+          title: "Event Tags"         # The title of your tab
+        targets:                   # The name of your tab
+          title: "Targets"         # The title of your tab
+        attributes:                   # The name of your tab
+          title: "Attribute"         # The title of your tab
+        events:                   # The name of your tab
+          title: "Events"         # The title of your tab
+        performers:                   # The name of your tab
+          title: "Perormers"         # The title of your tab

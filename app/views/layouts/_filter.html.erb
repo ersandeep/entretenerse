@@ -1,0 +1,47 @@
+<div class="filters">
+    <div class="top">
+        <a id="colapse-filters" title="<%=t :filters_tooltip%>" class="collapse"></a>
+        <h3><%=t :filters%></h3>
+    </div>
+    <%= render :partial => 'layouts/filter/calendar' %>
+    <div id="filterhourbox">
+      <h4 style='text-align:left'>
+        <em>&#9658;</em> 
+        <span id="filterhourtitle">
+          <%=t :filter_time%>
+        </span>
+      </h4>
+      <div id="filter-hours">
+        <%=link_to '06-12',
+          url_for(params.merge({ :hours => '06-12' })),
+          :class => 'filter-hours-item first',
+          :"data-hours" => '06-12' %>
+        <%=link_to '12-18', 
+          url_for(params.merge({ :hours => '12-18' })),
+          :class => 'filter-hours-item',
+          :"data-hours" => '12-18'  %>
+        <%=link_to '18-24', 
+          url_for(params.merge({ :hours => '18-24' })),
+          :class => 'filter-hours-item',
+          :"data-hours" => '18-24'  %>
+        <%=link_to '24-06',
+          url_for(params.merge({ :hours => '24-06' })),
+          :class => 'filter-hours-item last',
+          :"data-hours" => '24-06'  %>
+      </div>
+    </div><!-- end filterhourbox-->
+    <div id="filtermiscbox">
+        <h4 style='text-align:left'>
+          <em>&#9658;</em>
+          <span id="filtermisctitle">
+            <%=t :filter_misc%>
+          </span>
+        </h4>
+        <div id="filter-misc">
+          <%=link_to t(:show_older), 
+            url_for(params.merge({ :hours => 'started', :date=> 'today'})),
+            :class => 'filter-already-started',
+            :"data-hours" => 'started'%>
+        </div>
+    </div>
+</div>

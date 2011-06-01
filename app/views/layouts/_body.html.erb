@@ -1,0 +1,12 @@
+<div id="bd">
+  <div id="expand-filters-pane">
+    <a id="expand-filters" class="expand" title="Click to expand filters pane.">some</a>
+  </div>
+  <div id="col1" class="yui-u first">
+    <%= render :partial => 'layouts/filter' %>
+  </div>
+  <div id="col2" class="yui-u">
+    <%= yield %>
+  </div>
+  <div class="clear"></div>
+</div>

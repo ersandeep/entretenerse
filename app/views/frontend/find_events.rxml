@@ -1,0 +1,12 @@
+xml.instruct! :xml, :version=>"1.0" 
+xml.events {
+  #@events.group_by{ |i| i[@group_1] }.each do |title, events|
+    for event in @events
+      render( :partial => "event", 
+              :layout => false,
+              :locals => {:parent_xml => xml,
+                          :event => event,
+                          :show_occurrences => false})
+    end
+  #end 
+}

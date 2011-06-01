@@ -1,0 +1,3 @@
+page.insert_html :bottom, "comments", :partial => "comments/comment", :locals => {:comment => @comment}
+page[@comment.id.to_s].effect :highlight, "comments", :duration => 3
+page['textarea.commentbox'].val('');

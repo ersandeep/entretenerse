@@ -1,0 +1,17 @@
+<div id="crawlers_create">
+  <h1><%=t "crawlers.create.title" %></h1>
+  <%= form_for @crawler, :url => new_crawler_path, :html => { :class => 'inline' } do |form| %>
+    <%= render "shared/error_messages", :target => @crawler %>
+    <div class="field">
+      <%= form.label :url %>
+      <%= form.text_field :url, :class => 'text' %>
+    </div>
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, :class=> 'text' %>
+    </div>
+    <div class="field">
+      <%= form.submit t('next'), :style => 'margin-left: 420px;' %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,35 @@
+xml.instruct! :xml, :version=>"1.0" 
+xml.events {
+    for occurrence in @events
+      xml.event do
+        xml.id(occurrence.event.id)
+        xml.title(occurrence.event.title)
+        xml.category(occurrence.event.category.name)
+        xml.categoryid(occurrence.event.category.id)
+      
+        xml.text(occurrence.event.category.name)
+        xml.occurrenceid(occurrence.id)
+        
+        xml.place(occurrence.place.name)
+        
+        xml.image(occurrence.event.image_url)
+
+        xml.date(occurrence.date.nil? ? "" : occurrence.date.strftime('%b %d, %Y'))
+        
+        xml.hour(occurrence.hour.in_time_zone.strftime('%H:%M'))
+
+        # Ctype has several types
+        # N normal
+        # R highlighted, has a text "event PROMOTION"
+        # I with image
+        # A picture and highlighted, has a text "event PROMOTION"
+        
+        
+        if (occurrence.event.id % 10) < 4
+          xml.ctype "I"
+        else
+          xml.ctype "N"
+        end
+      end
+    end
+}

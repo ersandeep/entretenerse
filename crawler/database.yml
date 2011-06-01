@@ -1,0 +1,28 @@
+development:
+    crawler:
+        adapter: mysql
+        database: entretenerse_cr
+        encoding: utf8
+        username: entretenerse_cr
+        password: 85de80b9
+    import:
+        adapter: mysql
+        database: entretenerse
+        encoding: utf8
+        username: entretenerse
+        password: 87755e2b
+
+production:
+    crawler:
+        adapter: mysql
+        database: entretenerse_cr
+        encoding: utf8
+        username: entretenerse_cr
+        password: 85de80b9
+    import:
+        adapter: mysql
+        database: entretenerse
+        encoding: utf8
+        username: entretenerse
+        password: 87755e2b
+

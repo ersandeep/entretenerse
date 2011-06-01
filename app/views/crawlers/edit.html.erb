@@ -1,0 +1,52 @@
+<div id="crawlers_edit">
+  <h1><%=t('crawlers.edit.title', :name => @crawler.name) %></h1>
+  <%#<p class="notice">%>
+    <%#Notice is going here.%>
+  <%#</p>%>
+
+  <%= form_for @crawler, crawler_path(@crawler), :method => :put do |f| %>
+    <div id="steps">
+      <div class="step">
+        <label>
+          <%= t("crawlers.edit.first_step", :url => @crawler.url) %>
+        </label>
+      </div>
+      <div class="step">
+        <%= f.label t('crawlers.edit.then') %>
+        <%= select 'step', 'action', %w[Follow Take], { :prompt => I18n.t("crawlers.edit.select_action") } %>
+        <%= text_field_tag 'exp', '', :class => "text expression", :title => t('.expression') %>
+      </div>
+      <div class="commands">
+        <%= link_to t('.import'), '#', :id => 'import_configuration', :rel => '#import_dialog' %>
+        <%= link_to t('.add_step'), '#' %>
+        <%= submit_tag t('.done') %>
+      </div>
+    </div>
+  <% end %>
+  <div id="import_dialog">
+    <%= form_for @crawler, :url => import_crawler_path(@crawler), :html => { :method => :post } do |f| %>
+      <%= f.text_area :config %>
+      <%= link_to t(:button_cancel), '#', :id => 'import_dialog_close' %>
+      &nbsp;
+      <%= submit_tag t(:button_save) %>
+    <% end %>
+  </div>
+
+  <div id="minibrowser">
+    <fieldset>
+      <legend>Mini Browser</legend>
+      <div class="header">
+        <a class="back" href="#"><%= '<' %></a>
+        <a class="forward" href="#"><%= '>' %></a>
+        <%= text_field_tag 'address_line', @crawler.url %>
+        <%= submit_tag 'go', :id => 'go' %>
+      </div>
+      <iframe id="preview" name="preview" src="/proxy?url=<%#u @crawler.url %>" width="100%" height="400px" frameborder="0">
+        <p>Your browser does not support iframes. Expression preevaluation will be impossible.</p>
+      </iframe>
+    </fieldset>
+  </div>
+
+  <div id='step_template' style='display:none;'>
+  </div>
+</div>

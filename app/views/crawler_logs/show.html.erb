@@ -1,0 +1,8 @@
+<h3>Crawler Log entry.</h3>
+<div class="date">Date <%= @log_entry.updated_at.strftime('%Y-%m-%d %H:%M') %></div>
+<div class="config">
+Config:
+<%= form_for @log_entry do |form| %>
+  <%= form.text_area :config %>
+<% end -%>
+</div>

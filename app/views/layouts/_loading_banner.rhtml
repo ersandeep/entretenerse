@@ -1,0 +1,11 @@
+<div style="display: table; width:99%; height:99%; margin:auto;">
+  <div style="display: table-cell; vertical-align: middle;">
+      <h1><%= t :site%>!</h1>
+      <h5><%= t :loading%></h5>
+      <img src="/images/rel_interstitial_loading.gif" >
+      <div id="errormessage" style="visibility:hidden">
+      <p><%= t :loading_too_long%> </p>
+      <input type="button" name="recargar" value="recargar" onclick="window.location.reload()" />
+      </div>
+  </div>
+</div>

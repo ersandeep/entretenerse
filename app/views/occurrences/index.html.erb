@@ -1,0 +1,28 @@
+<h1>Listing occurrences</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Dayofweek</th>
+    <th>Repeat</th>
+    <th>From</th>
+    <th>To</th>
+  </tr>
+
+<% for occurrence in @occurrences %>
+  <tr>
+    <td><%=h occurrence.date %></td>
+    <td><%=h occurrence.dayOfWeek %></td>
+    <td><%=h occurrence.repeat %></td>
+    <td><%=h occurrence.from %></td>
+    <td><%=h occurrence.to %></td>
+    <td><%= link_to 'Show', occurrence %></td>
+    <td><%= link_to 'Edit', edit_occurrence_path(occurrence) %></td>
+    <td><%= link_to 'Destroy', occurrence, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New occurrence', new_occurrence_path %>

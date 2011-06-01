@@ -1,0 +1,32 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2009-03-10
+  dayOfWeek: 1
+  repeat: false
+  from: 2009-03-10 21:03:46
+  to: 2009-03-10 21:03:46
+
+two:
+  date: 2009-03-10
+  dayOfWeek: 1
+  repeat: false
+  from: 2009-03-10 21:03:46
+  to: 2009-03-10 21:03:46
+
+
+# == Schema Info
+# Schema version: 20110328181217
+#
+# Table name: occurrences
+#
+#  id         :integer(4)      not null, primary key
+#  date       :datetime
+#  dayOfWeek  :integer(4)
+#  from       :datetime
+#  to         :datetime
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#  place_id   :integer(4)      not null
+#  event_id   :integer(4)      not null
+#  hour       :time

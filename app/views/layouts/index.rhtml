@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<% content_for :head do %>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta name="description" content="Calendario de eventos de Buenos Aires por dia y hora - Teatros, cines, recitales y fiestas.">
+  <meta name="keywords" content="eventos capital federal, eventos buenos aires, descuentos en cines y teatros">
+  <title><%= t :site%>! - v0.2.1</title>
+<% end %>
+<html>
+  <head>
+    <%= yield :head %>
+    <%= stylesheet_link_tag "yui-combo-2.8.0r4", "samskinfixes", "clickpass", "maga2", "app", "jquery.ui.stars" %>
+    <!--[if lt IE 8]>
+      <%= stylesheet_link_tag "app_ie.css" %>
+      <link rel="stylesheet" href="/layout/blueprint/ie.css" type="text/css" media="screen, projection" />
+    <![endif]-->
+    <%= csrf_meta_tag %>
+    <%= render :partial => 'layouts/analytics' %>
+  </head>
+  <body>
+    <a name="cp_make_big"></a>
+    <div style="height:100%;">
+      <%= render :partial => 'layouts/header' %>
+      <%= render :partial => 'layouts/body' %>
+      <!-- end db-->
+      <div id="ft">
+      </div>
+      <!-- end ft-->
+    </div>
+    <div id="in_progress" style="display:none;">
+      <img src="/images/ajax-loader.gif" alt="Operation In Progress" />
+    </div>
+    <%= javascript_include_tag 'jquery/jquery',
+      'jquery/jquery.ui.core',
+      'jquery/jquery.ui.widget',
+      'jquery/jquery.animate-enhanced',
+      'jquery/jquery.easing',
+      'jquery/jquery.hoverIntent',
+      'jquery/jquery.history',
+      'jquery/jquery.tools.scrollable.min',
+      'jquery/jquery.ui.datepicker',
+      'jquery/jquery.ui.position.min',
+      'jquery/jquery.ui.stars',
+      'jquery/overlay',
+      'jquery/overlay.apple.js',
+      'jquery/jquery.watermark.min',
+      'jquery/effects.core',
+      'jquery/effects.highlight',
+
+      'plugins/categories',
+      'plugins/filters',
+      'plugins/navigation',
+
+      'views/layout',
+      'views/occurrences/index',
+      'views/occurrences/show',
+      'views/categories/index',
+      'views/admin/index',
+      'views/crawlers/index',
+      'views/crawlers/edit',
+      'views/crawlers/show',
+
+      'application',
+      'rails',
+      'utils',
+      :cache => Rails.env.production? %>
+  </body>
+</html>

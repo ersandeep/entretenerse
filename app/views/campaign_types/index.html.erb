@@ -1,0 +1,20 @@
+<h1>Listing campaign_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% for campaign_type in @campaign_types %>
+  <tr>
+    <td><%=h campaign_type.name %></td>
+    <td><%= link_to 'Show', campaign_type %></td>
+    <td><%= link_to 'Edit', edit_campaign_type_path(campaign_type) %></td>
+    <td><%= link_to 'Destroy', campaign_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New campaign_type', new_campaign_type_path %>

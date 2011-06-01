@@ -1,0 +1,20 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  rank: 1
+  attribute: MyString
+
+two:
+  rank: 1
+  attribute: MyString
+
+
+# == Schema Info
+# Schema version: 20110328181217
+#
+# Table name: preferences
+#
+#  id           :integer(4)      not null, primary key
+#  rank         :integer(4)      not null
+#  user_id      :integer(4)      not null
+#  attribute_id :integer(4)      not null

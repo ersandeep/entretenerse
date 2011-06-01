@@ -1,0 +1,7 @@
+<div class="step">
+  <%= t('crawlers.edit.step', :number => step_counter + 1) %>
+  <div class="expression">
+    <%= form.label :expression %>
+    <%= text_field_tag 'exp', step["exp"], :class => "text" %>
+  </div>
+</div>

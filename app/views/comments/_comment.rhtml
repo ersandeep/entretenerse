@@ -1,0 +1,14 @@
+<div id="<%= comment.id.to_s %>" class="commentdiv">
+  <div class="headline">
+    <span class="user">
+      <%= comment.user.name %>
+    </span>
+    <span class="dark_header">
+      <%= time_ago_in_words(comment.created_at) %> <%= t :time_past%>
+    </span>
+  </div>
+  <div class="comment">
+    <%= comment.comment %>
+  </div>
+</div>
+

@@ -1,0 +1,7 @@
+INSERT INTO attributes (name, parent_id, value) (SELECT value, id, value FROM attributes a where name LIKE '%Operador%');
+
+INSERT INTO events_attributes (SELECT event_id, (SELECT id FROM attributes WHERE name = 'DirectTV' AND value = 'DirectTV') att_id FROM (SELECT event_id FROM events_attributes WHERE attribute_id = (SELECT id FROM attributes WHERE name = 'Operador TV' AND value = 'DirectTV')) ev);
+INSERT INTO events_attributes (SELECT event_id, (SELECT id FROM attributes WHERE name = 'Multicanal' AND value = 'Multicanal') att_id FROM (SELECT event_id FROM events_attributes WHERE attribute_id = (SELECT id FROM attributes WHERE name = 'Operador TV' AND value = 'Multicanal')) ev);
+INSERT INTO events_attributes (SELECT event_id, (SELECT id FROM attributes WHERE name = 'Cablevisión' AND value = 'Cablevisión') att_id FROM (SELECT event_id FROM events_attributes WHERE attribute_id = (SELECT id FROM attributes WHERE name = 'Operador TV' AND value = 'Cablevisión')) ev);
+INSERT INTO events_attributes (SELECT event_id, (SELECT id FROM attributes WHERE name = 'Telecentro' AND value = 'Telecentro') att_id FROM (SELECT event_id FROM events_attributes WHERE attribute_id = (SELECT id FROM attributes WHERE name = 'Operador TV' AND value = 'Telecentro')) ev);
+INSERT INTO events_attributes (SELECT event_id, (SELECT id FROM attributes WHERE name = 'Otros' AND value = 'Otros') att_id FROM (SELECT event_id FROM events_attributes WHERE attribute_id = (SELECT id FROM attributes WHERE name = 'Operador TV' AND value = 'Otros')) ev);

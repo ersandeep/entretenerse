@@ -1,0 +1,203 @@
+require 'rubygems'
+require 'active_record'
+
+require 'common'
+
+@months= {'Enero'=>'01','Febrero'=>'02','Marzo'=>'03','Abril'=>'04','Mayo'=>'05','Junio'=>'06',
+          'Julio'=>'07','Agosto'=>'08','Septiembre'=>'09','Octubre'=>'10','Noviembre'=>'11','Diciembre'=>'12'}
+
+def parse_occurrence(fecha, horario, place, event)
+  o = nil
+
+  @months.each_pair {|key, value| 
+    fecha = fecha.gsub(" de #{key} de ","-#{value}-")
+    horario = horario.gsub(" de #{key} de ","-#{value}-")
+    horario = horario.gsub(/[0-9]+\-[0-9]+\-[0-9]+/,"")
+  }
+
+  #fecha = fecha.gsub(" de Julio de ","-07-")
+  #fecha = fecha.gsub(" de Agosto de ","-08-")
+  
+  puts "Buscando Ocurrencias en :" + fecha
+  
+  puts "FECHAS : " + fecha.scan(/[0-9]+\-[0-9]+\-[0-9]+/).length.to_s
+  matches = fecha.scan(/[0-9]+\-[0-9]+\-[0-9]+/)
+  if ( matches != nil)
+    matches.each do |m|
+  
+      #o = Occurrence.new
+      #o.place = place
+      #o.event = event
+      #o.date = Date.strptime(m.to_s,"%d-%m-%Y")
+      #o.repeat = 'N'
+      #o.hour = Time.parse(horario.match(/[0123456789]+:[0123456789]+/).to_s)
+      #o.save
+      horario = horario.match(/[0123456789]+:*[0123456789]*/).to_s
+      if (horario.length == 2)
+        horario += ":00"
+      end
+      if (horario != nil && horario.length > 0)
+        #horario = horario.gsub("24:00","23:59")
+        fecha = Date.strptime(m.to_s,"%m-%d-%Y")
+        if (horario.slice(0,2) == "24")
+          fecha+=1
+          horario = horario.gsub("24:","00:")
+        end
+        puts 'E: '+event.id.to_s+'   F: '+ m.to_s + '   H:' +  horario
+        o = Occurrence.find_or_create_by_place_id_and_event_id_and_date_and_repeat_and_hour(place.id, event.id, fecha, 'N', horario)
+
+        find_or_add_attributes(o, ((place.town)? place.town : 'No Disponible'), 'Barrio', 'Otros', 'Recitales', 'Barrios') #agrego el barrio
+      end
+    end
+  end
+end
+
+def add_performer(rol, performers, event)
+  
+  rol = rol.gsub(" y ",",")
+  directores = performers
+  
+  if ( directores == nil )
+    puts "Esta peli no tiene " + rol
+  else
+    dirs = directores.split(",")
+    dirs.each do |director|
+      i = 0  
+      director = director.strip
+      pd = Performer.find(:first,:conditions=>["name = ?",director])
+      if pd == nil
+        pd = Performer.new
+        pd.name = director
+        pd.save
+      end
+      i+=1
+      perf = Performance.find_or_create_by_performer_id_and_rol_and_event_id(pd.id, rol, event.id)  
+      perf.order = i
+      perf.save
+      #if ( !event.performers.exists?(pd) )
+      #  perf = Performance.new
+      #  perf.performer = pd
+      #  perf.rol = rol
+      #  perf.order = i
+      #  perf.event = event
+      #  perf.save
+      #end
+    end    
+  end
+  
+end
+
+
+def import_shows(movs)
+  
+  sponsor = Sponsor.find(:first,:conditions=>["name = ?","Nektra"])
+  if ( sponsor == nil )
+    raise "No se encuentra el Sponsor por Defecto 'Nektra'" 
+  end
+  
+  cat = Category.find(:first, :conditions=> { :name => "Recitales"})
+    
+  movs.each do |m|
+    puts "Crawleando " + m.title
+    
+    event = Event.find(:first,:conditions =>["title = ?  AND category_id = ?", m.title.strip, cat.id])
+    if ( event == nil ) 
+      event = Event.new
+      event.title = m.title.strip
+      event.text = m.description
+      event.description = m.description
+      event.category_id = cat.id
+      event.thumbnail = m.image_url
+      if ( event.text == nil ) 
+        event.text = "Sin Sinopsis"
+      end
+      event.sponsor = sponsor
+    
+      event.save
+
+      grab_picture(event, m.image_url)
+    end
+    
+    if (m.artists != nil)
+      m.artists.split(",").each do |a|
+        add_performer("Artista",a.strip,event)
+      end
+    end
+  
+  end
+end
+
+def import_places(shows)
+  
+    cat = Category.find(:first, :conditions=> { :name => "Recitales"})
+   
+   shows.each do |show|
+    if not show.lugar
+      next
+    end
+    lugar = show.lugar.split("-");
+    if (lugar[0] == nil)
+      puts "que raro"
+    end
+    sala = lugar[0].strip
+    puts "Sala: " + sala 
+    place = Place.find(:first,:conditions=>["name = ?",sala])
+    if ( place == nil )
+      begin
+        place = Place.new
+        place.name = sala
+        if (lugar.length > 1)
+          dir = lugar[1].split(",");
+          if (dir.length > 0)
+            place.address = dir[0].strip
+          end
+          if (dir.length > 1)
+            place.town = dir[1].strip
+          end
+          if (dir.length > 2)
+            place.state = dir[2].strip
+          end
+          if (dir.length > 3)
+            place.country = dir[3].strip
+          end
+          if (dir.length > 4)
+            place.phone = dir[4].strip
+          end
+        end
+        place.lat = 0
+        place.long = 0
+        place.save
+      rescue Exception => e
+        puts e.message
+        puts "Can't create place for " + sala
+      end
+    end
+    
+    name = show.title.strip
+    occur = 0;
+    begin
+        event = Event.find(:first,:conditions =>["title = ?  AND category_id = ?", name, cat.id])
+        if ( event != nil)
+          if ! event.places.exists?(place) 
+            occur = parse_occurrence(show.date,show.horario,place,event)
+          end
+        else
+          puts "Music Show Not Found: " + name
+        end
+      
+    rescue Exception => e
+      puts e.message
+    end  
+  end    
+end
+
+
+begin
+  shows = MusicShow.find(:all)
+  import_shows(shows)
+  import_places(shows)
+rescue Exception => e
+  puts e.message
+  puts e.backtrace
+end  
+

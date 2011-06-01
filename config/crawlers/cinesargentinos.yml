@@ -1,0 +1,21 @@
+name: Cine in Argentina
+url: "http://www.cinesargentinos.com.ar/horarios/"
+category_id: 1
+config:
+  group: //div[@class='listaComplejos']/ul/li
+  links: a
+  place_name: a
+  config:
+    group: //div[@class='horarioPelicula']/ul/li
+    links: h2/a
+    time: span
+    config:
+      group: //div[@class='mainContent']
+      links: li[@id='peliculaTabDatosCompletos']/a
+      event_title: h1[@class='tituloPaginaSecundaria']
+      event_image_url: div[@class='posterPelicula']/img
+      config:
+        group: //div[@class='PeliculaDatosCompletos']
+        event_description: p[@class='Sinopsis']
+        category: p[contains('GENERO')]
+

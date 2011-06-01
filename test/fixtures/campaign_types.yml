@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+
+two:
+  name: MyString
+
+
+# == Schema Info
+# Schema version: 20110328181217
+#
+# Table name: campaign_types
+#
+#  id    :integer(4)      not null, primary key
+#  name  :string(50)      not null
+#  ctype :string(1)       not null

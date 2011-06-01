@@ -1,0 +1,57 @@
+<li class="entrycol">
+  <div class="column">
+    <% column.each do |occurrence| %>
+      <div class="entry" data-weight="<%=occurrence.weight %>">
+        <% if occurrence.show_date_header %>
+          <div class="date d<%= occurrence.date.day %>">
+            <%=I18n.localize(occurrence.date, :format => '%A %d') %>
+          </div>
+        <% end %>
+        <% if occurrence.show_time_header %>
+          <div class="time">
+            <%=h occurrence.hour.strftime('%H:%M') %>
+          </div>
+        <% end %>
+        <% if occurrence.show_category_header %>
+          <div class="category <%=h(occurrence.event.category.value.downcase) %>">
+            <%=h(occurrence.event.category.value.capitalize) %>
+          </div>
+        <% end %>
+        <% if occurrence.show_char_header %>
+          <div class="char">
+            <%=h(occurrence.event.title[0, 1].upcase) %>
+          </div>
+        <% end %>
+        <div style=""><!-- ie7 fix -->
+          <%= link_to h(occurrence.event.title), {
+            :controller => :event,
+            :action => :view,
+            :event => occurrence.event.title.to_url,
+            :place => occurrence.place ? occurrence.place.name.to_url : nil,
+            :id => occurrence.id },
+            :class => 'title ' + h(occurrence.event.category.value.downcase) %>
+          <div class="content">
+            <p class="subheader">
+              <span class="genre"><%=h occurrence.event.category.value %></span> 
+              -
+              <span class="venue"><%=h occurrence.place ? occurrence.place.name : nil %></span> 
+            </p>
+            <% unless occurrence.event.image_url.blank? %>
+              <div class="image" data-src="<%= occurrence.event.image_url %>" data-width="89" data-height="89" data-alt="<%= occurrence.event.title %>">
+                <noscript>
+                  <%= image_tag occurrence.event.image_url, :alt => occurrence.event.title, :size => '89x89', :rel=>'postload'  %>
+                </noscript>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="bar_tooltip">
+          <span class="date"><%=h (occurrence.date.strftime('%a %d') + ' - ' + occurrence.hour.strftime('%H:%M')) %></span>
+          <span class="title <%=h occurrence.event.category.value.downcase %>">
+            <%=h occurrence.event.title %>
+          </span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</li>

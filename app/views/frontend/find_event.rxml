@@ -1,0 +1,13 @@
+xml.instruct! :xml, :version=>"1.0" 
+xml.occurrence {
+  xml.id(@occurrence.id)
+  xml.date(@occurrence.date)
+  xml.hour(@occurrence.hour.to_time.strftime('%H:%M'))
+  xml.place(@occurrence.place.name)
+
+  render( :partial => "event", 
+          :layout => false,
+          :locals => {:parent_xml => xml,
+                      :event => @occurrence.event,
+                      :show_occurrences => true})
+}

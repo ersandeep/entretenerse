@@ -1,0 +1,46 @@
+<div id="crawlers_index">
+  <h1><%=t 'crawlers.index.title' %> </h1>
+  <% if flash[:notice] -%>
+    <div class="success"><%= flash[:notice] %></div>
+  <% end -%>
+  <% if @crawlers.empty? %>
+    <div id="no_crawlers">
+      <%=t 'crawlers.index.no_crawlers' %>
+      <input type="button" value="<%=t 'crawlers.index.add_one' %>" onclick="javascript:window.location.href='<%=new_crawlers_path %>';"></input>
+    </div>
+  <% else %>
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th style="text-align:center;">id</th>
+        <th width="95%"><%= t 'crawlers.index.crawler' %></th>
+      </tr>
+      <% @crawlers.each do |crawler| -%>
+      <tr>
+        <td style="text-align:center;vertical-align:top;"><%= crawler.id %></td>
+        <td>
+          <%= crawler.name %>
+          (<%= link_to t('crawlers.index.source'), crawler.url, :class => 'home_page_link' %>)
+          <div class="subheader">
+            Last Run: <%= t('crawlers.index.not_available') %>&nbsp;
+            <%= link_to t('crawlers.index.view_history'), crawler_path(crawler) %>
+          </div>
+          <div class="commands">
+            <%= link_to t('crawlers.index.edit'), edit_crawler_path(crawler) %>
+            <% if crawler.active? -%>
+              <%= link_to t('crawlers.index.deactivate'), deactivate_crawler_path(crawler), :method => :post %>
+            <% else -%>
+              <%= link_to t('crawlers.index.activate'), activate_crawler_path(crawler), :method => :post %>
+            <% end -%>
+            <% if crawler.running? -%>
+              <%= t 'crawlers.index.running' %>
+            <% else -%>
+              <%= link_to t('crawlers.index.run_now'), run_crawler_path(crawler), :method => :post %>
+            <% end -%>
+          </div>
+        </td>
+      </tr>
+      <% end -%>
+    </table>
+  <% end %>
+</div>
+

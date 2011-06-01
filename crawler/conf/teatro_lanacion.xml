@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<div id="contenedor" class="floatFix">
+    <div class="subContenedor floatFix">
+        <!-- Segunda -->
+        <div id="contenido">
+            <div class="espacio5">
+                &nbsp;
+            </div>
+            <h1>
+                Quienquiera que hubiera dormido en esta cama
+            </h1>
+            <div class="espacio10">
+                &nbsp;
+            </div>
+            <div class="obra floatFix">
+                <div class="izquierda">
+                    <img class="focal" alt="" src="/anexos/fotos/cartelera/t_11152ch.jpg" border="0">
+                </div>
+                <p>
+                    Una pareja evoca el día en que se comprometieron. Sin anillos, sin palabras románticas, se involucrarán en cuestiones de vida y muerte.
+                </p>
+                <p class="clear">
+                </p>
+            </div>
+            <div class="cajaPromoDestacada">
+                <div class="franjaGris">
+                    <div class="izquierda" style="width: 170px;">
+                        <b>
+                            Género:
+                        </b>
+                    </div>
+                    Drama&nbsp;
+                </div>
+                <div class="franjaBlanca">
+                    <div class="izquierda" style="width: 170px;">
+                        <b>
+                            Actor:
+                        </b>
+                    </div>
+                    Germán Rodríguez,&nbsp;Gabriela Licht&nbsp;y&nbsp;Osvaldo Djeredjian
+                </div>
+                <div class="franjaGris">
+                    <div class="izquierda" style="width: 170px;">
+                        <b>
+                            Dirección:
+                        </b>
+                    </div>
+                    Martín Flores Cárdenas
+                </div>
+                <div class="franjaBlanca">
+                    <div class="izquierda" style="width: 170px;">
+                        <b>
+                            Dramaturgia:
+                        </b>
+                    </div>
+                    Martín Flores Cárdenas
+                </div>
+                <div class="franjaGris">
+                    <div class="izquierda" style="width: 170px;">
+                        <b>
+                            Escenografía:
+                        </b>
+                    </div>
+                    Carlos Di Pasquo
+                </div>
+                <div class="franjaBlanca">
+                    <div class="izquierda" style="width: 170px;">
+                        <b>
+                            Iluminación:
+                        </b>
+                    </div>
+                    Marco Pastorino
+                </div>
+            </div>
+            <div class="espacio5">
+                &nbsp;
+            </div>
+            <h3 class="techo color">
+                FUNCIONES PARA ESTA OBRA
+            </h3>
+            <div class="acumulados">
+                <b>
+                    Abasto Social Club
+                </b>
+                <br>
+                    Humahuaca 3649 - Capital Federal
+                    &nbsp;&nbsp;
+                    
+                    <a onclick="javascript:abrirModal('/herramientas/mapa/mapa_pop.asp?mojonTipo_id=1,3,4&amp;opcion=[POSX=-58.416298][POSY=-34.602568]&amp;nombre=Abasto Social Club%20-%20Humahuaca 3649','Mapa', 'MapaModal', 500, 585,'')" href="javascript:void(0)" class="modal" title="Abre en ventana modal">
+                        <img src="/imgs/layout/iconos/herramientas/verMapa.gif" alt="" style="border: 0px none ; float: none; vertical-align: middle; margin-right: 5px;" border="0" height="15" width="15">
+                        [ver mapa]
+                    </a>
+                    <br>
+                        4862-7205
+                        <br>
+                        Horarios: vie &nbsp;
+                        21:30.
+                        </div>
+                        <div class="espacio10">
+                            &nbsp;
+                        </div>
+                        <br>
+                            <h3 class="techo color">
+                                OTRAS OBRAS EN EL TEATRO
+                            </h3>
+                            <div class="acumulados">
+                                <a title="Ver la ficha de la obra" href="obraFicha.asp?obra=11293&amp;teatro_id=778">
+                                    <h3>
+                                        <b>
+                                            Los Rocabilis&nbsp;
+                                        </b>
+                                    </h3>
+                                </a>
+                                <span class="grisMedio">
+                                    Comedia Dramática&nbsp;
+                                    
+                                    <br>
+                                </span>
+                                Horarios:  sáb &nbsp;
+                                23:00.
+                                
+                            </div>
+                            <div class="acumulados">
+                                <a title="Ver la ficha de la obra" href="obraFicha.asp?obra=10178&amp;teatro_id=778">
+                                    <h3>
+                                        <b>
+                                            Sin voz&nbsp;
+                                        </b>
+                                    </h3>
+                                </a>
+                                <span class="grisMedio">
+                                    Drama&nbsp;
+                                    <br>
+                                </span>
+                                Horarios:  sáb &nbsp;
+                                21:00.
+                                
+                            </div>
+                            <div class="acumulados">
+                                <a title="Ver la ficha de la obra" href="obraFicha.asp?obra=11292&amp;teatro_id=778">
+                                    <h3>
+                                        <b>
+                                            Una familia dentro de la nieve&nbsp;
+                                        </b>
+                                    </h3>
+                                </a>
+                                <span class="grisMedio">
+                                    Drama&nbsp;
+                                    
+                                    <br>
+                                </span>
+                                Horarios: vie &nbsp;
+                                23:00.
+                                
+                            </div>
+                            <div class="espacio10">
+                            </div>
+                            <div class="derecha" style="margin-bottom: 5px;">
+                                Información provista por INFOJET
+                            </div>
+                            <div class="espacio10">
+                            </div>
+                            
+                            </div>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Listado de <%=@top%></title>
+</head>
+<body>
+	<h3><%=@top%></h3>
+	<ul>
+	<% @atts.each do |at| %>
+		<li>
+			<a href="<%= @att_name + '/' + at.value %>" title=""><%= at.value %></a>
+		</li>
+	<%	end	%>
+	</ul>
+	<h4><a href="/static/hoy/<%= @att_name %>">Ver Eventos de Hoy </a> - <a href="/static/semana/<%= @att_name %>">  Ver Eventos de la Semana</a></h4>
+	<hr/>
+	<%
+		if ( @events != nil && ! @events.empty? )
+	%>
+	<h3>Eventos para <%=@event_scope%></h3>
+	<ul>
+	<%
+		@events.each do |e|
+	%>
+		<li>
+			<div>
+				<a href="/event/detail/<%= e.id %>" title=""><%= e.title %></a>
+			</div>
+			<div>
+				<p><%= e.text %></p>
+			</div>
+		</li>
+	<%
+		end
+		
+	%>
+	</ul>
+	<%
+		end
+	%>
+</body>
+</html>

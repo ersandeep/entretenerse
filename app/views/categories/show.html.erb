@@ -1,0 +1,50 @@
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "app" %>
+<% end %>
+<h1>Edit "<%=@category.value %>" Category (<%=@category.id %>)</h1>
+<style type="text/css">
+  form div { clear: both; }
+  form label {
+    display: block;
+    float: left;
+    width: 150px;
+    text-align: right;
+    padding: 0 10px;
+    font-size: 120%;
+  }
+  <%#form label, form span { padding: 10px; }%>
+  form div {
+    padding: 10px 2px;
+  }
+</style>
+<% form_for @category, :url => '/categories/update/?id=' + @category.id.to_s do |f| %>
+  <div>
+    <label for="name">Name:</label>
+    <span id="name"><%=h @category.name %></span>
+  </div>
+  <div>
+    <label for="category[parent]">Parent:</label>
+    <span id="category[parent]">
+      <%=h @category.parent ? @category.parent.value + "(#{@category.parent.id})" : "Absent (Top Category)" %>
+    </span>
+  </div>
+  <div>
+    <label for="category[children]">Children:</label>
+    <span id="category[children]">
+      <%=h @category.children.find(:all, :limit => 3).collect(&:value).join(', ') + ', ...' %>
+    </span>
+  </div>
+  <div>
+    <label for="category[show_on_home_page]">On Home Page:</label>
+    <span id="category[show_on_home_page]">
+      <%=h @category.on_home_page? ? "Visible" : "Hidden" %>
+    </span>
+    <% message = "Occurrences assigned to \"#{@category.value}\" and all category tree below it will be " %> 
+    <% message += @category.on_home_page? ? "hidden from the home page." : "show on the home page." %>
+    <%= submit_tag "Change That", :name => "category[on_home_page]", :confirm => message %>
+    <%="" %>
+  </div>
+  <div>
+    <br/> <br/>
+  </div>
+<% end %>

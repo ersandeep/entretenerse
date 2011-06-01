@@ -1,0 +1,10 @@
+delete from event_campaign;
+delete from event_place;
+delete from promotions;
+delete from occurrence_searches;
+delete from occurrences;
+delete from places;
+delete from events_attributes;
+delete from performances;
+delete from events;
+commit;

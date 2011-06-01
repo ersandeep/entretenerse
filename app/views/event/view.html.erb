@@ -1,0 +1,67 @@
+<% content_for :head do %>
+  <meta http-equiv="description" content="<%=@occurrence.event.text.gsub('"', '') %>">
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta http-equiv="keywords" content="eventos capital federal, eventos buenos aires, descuentos en cines y teatros">
+  <title>
+    <%="#{t(:site)} - #{@occurrence.event.title} - #{@occurrence.event.category.name} - #{@occurrence.place ? @occurrence.place.name : nil}" %>
+  </title>
+<% end %>
+<input type="hidden" id="page_title" value="<%="#{t(:site)} - #{@occurrence.event.title} - #{@occurrence.event.category.name} - #{@occurrence.place ? @occurrence.place.name : nil}" %>"></input>
+<input type="hidden" id="page_description" value="<%=@occurrence.event.text.gsub('"', '') %>"></input>
+
+<div id="occurrences_show">
+  <div class="event">
+    <h2 class="title <%=h @occurrence.event.category.name.downcase %>">
+      <%= @occurrence.event.title %>
+    </h2>
+    <div class="subheader">
+        <span class="genre"><%=h @occurrence.event.category.name %></span> 
+        -
+        <span class="venue"><%=h @occurrence.place ? @occurrence.place.name : nil %></span> 
+    </div>
+    <div class="content">
+      <div class="date">
+        <label><%=t :event_hours %>:</label> 
+        <%= day_from_now(@occurrence.date) %> 
+        <%= I18n.localize(@occurrence.date, :format => '%A %d') unless @occurrence.date.nil? %>,
+        <% @occurrence.nearest_siblings.each do |occurrence| %>
+          <%= occurrence %>
+        <% end %>
+      </div>
+      <div class="venue">
+        <label><%=t :event_place %>:</label> <%=@occurrence.place ? @occurrence.place.name : nil %>
+      </div>
+
+      <div class="description">
+        <% unless @occurrence.event.image_url.nil? %>
+          <div class="image">
+            <%=image_tag @occurrence.event.image_url, :alt => @occurrence.event.title %>
+          </div>
+        <% end %>
+        <% unless @occurrence.event.text.blank? %>
+          <h4><%=t :event_description %></h4>
+          <p><%=@occurrence.event.text %></p>
+        <% end %>
+      </div>
+      <div id="rating">
+        <h4><%= t :event_rating%></h4>
+        <% form_for @occurrence.event, :url => { :controller => :event, :action => :rate, :id => @occurrence.event.id }, :method => :post do |f| %>
+          <%= f.hidden_field :id %>
+          <%= f.select :rating_int, (1..5).collect{ |i| [t(('rating_' + i.to_s).to_sym), i.to_i] } %>
+          &nbsp;
+          <%= f.submit "Rate !" %>
+          <label for="event_rating" id="event_rating_label">
+            Avg <%= @occurrence.event.rating.to_s %> (<%=@occurrence.event.rated_count %>)
+          </label>
+        <% end %>
+        <br/>
+      </div>
+      <div id="comments">
+        <h4><%= t :event_comments%></h4>
+        <%= render( :partial => "comments/comment_form.rhtml", :locals => { :model => @occurrence.event }) %>
+      </div>
+      <%=link_to t(:back), request.referer || '/', { :id => 'go_back' } %>
+      <br /> <br />
+    </div>
+  </div>
+</div>

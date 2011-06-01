@@ -1,0 +1,30 @@
+xml.instruct! :xml, :version=>"1.0" 
+xml.summary {
+  for cat in @summary
+    xml.category do
+        xml.desc("Cat_" + cat.category_id)
+        xml.id(cat.category_id)
+        xml.q(cat.q)
+        
+        xml.groups do
+          xml.group do
+            xml.item do
+              xml.desc("Acción")
+              xml.id(123)
+              xml.q(123)
+            end
+          end
+          
+          xml.group do
+            xml.item do
+              xml.desc("Acción")
+              xml.id(123)
+              xml.q(123)
+            end
+            
+          end
+        end
+      
+    end
+  end
+}

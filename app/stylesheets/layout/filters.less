@@ -1,0 +1,167 @@
+#bd {
+    #expand-filters-pane {
+        width: 30px;
+        height: 100px;
+        display: none;
+        float: left;
+
+        #expand-filters {
+            background: url("layout_sprite.png") no-repeat scroll -20px -200px transparent;
+            border: 1px solid #cccccc;
+            cursor: pointer;
+            margin: 20px 5px;
+            height: 13px;
+            width: 17px;
+            float: right;
+            font-size: 0;
+        }
+    }
+}
+
+#col1 {
+    width: 180px;
+    position: absolute;
+    left: -250px;
+    z-index: 0;
+    height: 100%;
+    float: left;
+
+    .filters {
+        .collapse {
+            background: transparent url(layout_sprite.png) no-repeat -20px -160px;
+            border: 1px solid #cccccc;
+            cursor: pointer;
+            font-size: 0;
+            height: 13px;
+            width: 17px;
+            float: right;
+        }
+
+        #expand-filters-pane {
+        }
+
+        #filter-days .filter-days-item,
+        #filter-hours .filter-hours-item,
+        #filter-misc .filter-already-started {
+            border-color: #808080;
+            border-style: solid;
+            border-width: 1px;
+            background: url("buttongradient.png") repeat-x scroll 0 -21px #EEEEEE;
+            margin: auto -2px;
+            padding: 4px;
+            display: inline-block;
+            font-size:7pt;
+            font-weight:normal;
+            color:#333333;
+            cursor:pointer;
+            text-decoration: none;
+        }
+
+        #filter-days .filter-days-item.selected,
+        #filter-hours .filter-hours-item.selected,
+        #filter-misc .filter-already-started.selected {
+            background: url("buttongradient.png") repeat-x scroll 0 0 #EEEEEE;
+            border-color: #808080;
+            font-weight: bold;
+            margin-bottom: -3px; /* IE 7 fix */
+        }
+
+        #filter-hours .filter-hours-item {
+          font-weight: bold;
+          font-size: 83%;
+        }
+
+        #filter-misc .filter-already-started {
+          font-size: 83%;
+        }
+
+        #filter-calendar-container {
+            background:none repeat scroll 0 0 #F4F5F5;
+            padding: 5px;
+            margin: 10px 0px;  
+            border: 1px solid #CCCCCC;
+
+            .ui-datepicker-title {
+              background:none repeat scroll 0 0 transparent;
+              font-weight:bold;
+              padding:0 0 0.6em 1em;
+              text-align:center;
+              width: 80%;
+              color:#666666;
+              font-size:90%;
+              display: inline;
+            }
+
+            .ui-datepicker-prev {
+              background:url("../images/yui_sprite.png") no-repeat scroll 0 -450px transparent;
+              cursor:pointer;
+              height:15px;
+              width:25px;
+              display: block;
+              float: left;
+              z-index: 1000;
+            }
+
+            .ui-datepicker-next {
+              background:url("../images/yui_sprite.png") no-repeat scroll 0 -500px transparent;
+              cursor:pointer;
+              height:15px;
+              width:25px;
+              display: inline-block;
+              float: right;
+              z-index: 1000;
+            }
+
+            .ui-datepicker-calendar {
+                th {
+                  color:#666666;
+                  font-size:83%;
+                  border-collapse:collapse;
+                  border-spacing:0;
+                  text-align:center;
+                  border: none;  
+                  height:2em;
+                  line-height:1.6em;
+                  margin: 0;
+                  padding: 5px;
+                }
+
+                tbody {
+                    font-size:75%;
+
+                    .ui-datepicker-week-end {
+                      background:none repeat scroll 0 0 #FFFFCC;
+                    }
+
+                    .ui-datepicker-current-day {
+                      background-color:#B3D4FF;
+                    }
+
+                    td {
+                        background:none repeat scroll 0 0 #FFFFFF;
+                        border:1px solid #CCCCCC;
+                        height:1.6em;
+                        line-height:1.6em;
+                        padding:1px;
+                        text-align:center;
+                        white-space:nowrap;
+
+                        a {
+                          color:#096BB3;
+                          text-decoration: none;
+                          display:block;
+                          height:100%;
+                        }
+                    }
+                }
+
+                .ui-datepicker-other-month {
+                  background-color:#CCCCCC;
+                  color:#A6A6A6;
+                  cursor:default;
+                }
+
+            }
+        }
+    }
+}

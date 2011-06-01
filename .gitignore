@@ -1,0 +1,15 @@
+.DS_Store
+*.swp
+*.swo
+*.log
+public/thumbnails/
+notes
+bugs
+*.zip
+*.pyc
+tmp/
+public/stylesheets/header.css
+public/stylesheets/occurrences/
+public/stylesheets/layout/
+tags
+TAGS

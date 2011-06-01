@@ -1,0 +1,267 @@
+/*
+ * samskinfixes
+ Fixes para los estilos SAM del YUI.
+ */
+
+/*** body ***/
+.yui-skin-sam {margin:0}
+
+/***yuilayout***/ 
+.yui-skin-sam .yui-layout-unit-center, 
+.yui-skin-sam .yui-layout-unit-left, 
+.yui-skin-sam .yui-layout-unit-right {
+    background: #F4F5F5 url(gradient.png) repeat-x scroll left top;
+} 
+
+.yui-skin-sam .yui-layout {
+    background: #F4F5F5 url(gradient.png) repeat-x scroll left top;
+} 
+
+.yui-skin-sam .yui-layout .yui-layout-unit .yui-layout-wrap .yui-layout-bd {
+    background: #F4F5F5 url(gradient.png) repeat-x scroll left top;
+    border: 0;
+} 
+
+.yui-skin-sam .yui-layout .yui-layout-unit-top .yui-layout-wrap .yui-layout-bd, 
+.yui-skin-sam .yui-layout .yui-layout-unit-bottom .yui-layout-wrap .yui-layout-bd {
+    background: #F9F9F9;
+} 
+
+.yui-skin-sam .yui-layout .yui-layout-unit-left .collapse {
+    background: transparent url(layout_sprite.png) no-repeat -20px -160px;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    font-size: 0;
+    height: 13px;
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    width: 17px;
+} 
+
+.yui-skin-sam .yui-layout .yui-layout-unit-right .collapse {
+    background: transparent url(layout_sprite.png) no-repeat -20px -200px;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    font-size: 0;
+    height: 13px;
+    position: absolute;
+    right: 13px;
+    top: 13px;
+    width: 17px;
+} 
+
+.yui-skin-sam .yui-layout .yui-layout-clip {
+    background: #F4F5F5 url(gradient.png) repeat-x scroll left top;
+    border: 0;
+} 
+
+.yui-skin-sam .yui-layout .yui-layout-clip .wrapclip {
+    border-right: 1px solid #CCCCCC;
+    margin: 9px 0;
+    width: 29px;
+    height: 144px; /*corregir*/
+} 
+
+.yui-skin-sam .yui-layout .yui-layout-clip .wrapclip .collapse {
+    position: relative;
+    right: 0;
+    top: 4px;
+    border: 1px solid #cccccc;
+    margin: 5px;
+} 
+
+.yui-skin-sam .yui-layout-clip .yui-layout-clip-left {
+} 
+
+.yui-skin-sam .yui-layout-clip .yui-layout-clip-right {
+} 
+
+.yui-skin-sam .yui-layout .yui-layout-clip-left .collapse { 
+	background: transparent url(layout_sprite.png) no-repeat -20px -200px; 
+	margin-top: 10px;
+}
+
+.yui-skin-sam .yui-layout .yui-layout-clip-right .collapse { 
+	background: transparent url(layout_sprite.png) no-repeat -20px -160px; 
+	margin-top: 10px;
+}
+
+/****/
+/****/
+/****/ 
+
+.yui-skin-sam .yui-button button {
+    color: #333333;
+	font-size: 85%;
+}
+
+.yui-skin-sam .yui-button-disabled button {
+    color: #cccccc;	
+}
+
+#filtertoolbar button em {
+    padding-left: 21px;
+    height: 18px;
+    margin: 2px 0px 2px 1px;
+    display: block;
+    font-style: normal;
+    line-height: 16px;
+    white-space: nowrap;
+    width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+
+#filtertoolbar .yui-button button,
+#titlebarsuperior .yui-button button
+{
+	padding-left: 0px;
+}
+
+#filtertoolbar .yui-button {float:left;}
+
+/**carousel**/
+ .yui-carousel-nav {
+    display: none;
+} 
+
+.yui-carousel-element {
+    margin: 6px 0;
+} 
+
+.yui-carousel-element li {
+    height: 100%;
+    margin: 0;
+    border: 0;
+} 
+
+.yui-carousel .yui-carousel-item-selected {
+    background: #EDF3DA none repeat scroll 0 0;
+    margin: 0;
+    border: 0;
+}
+
+/*entriespictures*/
+/**/ 
+
+.yui-skin-sam .yuimenu ul {
+    border: 0;
+} 
+
+.yui-skin-sam .yuimenu h6.first-of-type {
+    border-width: 1px 0 0;
+} 
+
+#menuwithgroups div.bd {
+    overflow: hidden;
+} 
+
+#menuwithgroups ul.menu3col, 
+#menuwithgroups ul.menu3col1 {
+    border-width: 0;
+    float: left;
+    width: 120px;
+} 
+
+#menuwithgroups div.bd h6 {
+    clear: left;
+} 
+
+#menuwithgroups div.bd h6 span {
+    margin-left: 1em;
+    font-size: 85%;
+    font-weight: normal;
+    cursor: pointer;
+} 
+
+#menuwithgroups div.bd h6 span:hover {
+    text-decoration: underline;
+    color: #F0B962;
+}
+
+
+/*panel*/
+
+#eventdetailpanel {
+    text-align: left;
+} 
+
+#eventdetailpanel .bd {
+    padding: 12px 9px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+	background: #F4F5F5 url(gradient.png) repeat-x scroll left top;	
+} 
+
+/*treeview*/
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+.ygtvtn {
+background:transparent none repeat scroll 0 0;
+height:20px;
+width:1em;
+}
+.ygtvtm {
+background:transparent url(sprite-menu.gif) no-repeat scroll -8px 2px;
+height:20px;
+width:1em;
+}
+.ygtvtmh {
+background:transparent url(sprite-menu.gif) no-repeat scroll -8px -77px;
+height:20px;
+width:1em;
+}
+.ygtvtp {
+background:transparent url(sprite-menu.gif) no-repeat scroll -8px -315px;
+height:20px;
+width:1em;
+}
+.ygtvtph {
+background:transparent url(sprite-menu.gif) no-repeat scroll -8px -395px;
+height:20px;
+width:1em;
+}
+.ygtvln {
+background:transparent none repeat scroll 0 0;
+height:20px;
+width:1em;
+}
+.ygtvlm {
+background:transparent url(sprite-menu.gif) no-repeat scroll -8px 2px;
+height:20px;
+width:1em;
+}
+.ygtvlmh {
+background:transparent url(sprite-menu.gif) no-repeat scroll -8px -77px;
+height:20px;
+width:1em;
+}
+.ygtvlp {
+background:transparent url(sprite-menu.gif) no-repeat scroll -8px -315px;
+height:20px;
+width:1em;
+}
+.ygtvlph {
+background:transparent url(sprite-menu.gif) no-repeat scroll -8px -395px;
+height:20px;
+width:1em;
+}
+.ygtvdepthcell {
+background:transparent none repeat scroll 0 0;
+height:20px;
+width:1em;
+cursor:default;
+}
+.ygtvln, .ygtvtn {
+	cursor:default;
+}
+
+.ygtvlabel, .ygtvlabel:link, .ygtvlabel:visited, .ygtvlabel:hover {
+background-color:transparent;}

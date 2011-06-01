@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2009-03-10
+  dayOfWeek: 1
+  repeat: false
+  from: 2009-03-10 20:51:06
+  to: 2009-03-10 20:51:06
+
+two:
+  date: 2009-03-10
+  dayOfWeek: 1
+  repeat: false
+  from: 2009-03-10 20:51:06
+  to: 2009-03-10 20:51:06

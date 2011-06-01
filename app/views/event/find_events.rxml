@@ -1,0 +1,23 @@
+xml.instruct! :xml, :version=>"1.0" 
+xml.events {
+  #@events.group_by{ |i| i[@group_1] }.each do |title, events|
+    for event in @events
+      xml.event do
+        xml.title(event.title)
+        xml.text(event.text)
+        xml.description(event.description)
+        if event.occurrences != nil && event.occurrences.length > 0
+          xml.place(event.occurrences[0].place.name)
+        end
+        xml.image(event.thumbnail)
+    
+        if event.thumbnail == nil || event.thumbnail.length == 0
+          xml.width "70" #32
+        else
+          xml.width "125" #105
+        end
+      
+      end
+    end
+  #end 
+}

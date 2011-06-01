@@ -1,0 +1,296 @@
+@import "layout/header.less";
+@import "layout/filters.less";
+@import "layout/form.less";
+@import "layout/blueprint/forms.less";
+
+@import "occurrences/index.less";
+@import "occurrences/show.less";
+
+@import "admin/index.less";
+@import "categories/index.less";
+
+@import "crawlers/index.less";
+@import "crawlers/edit.less";
+@import "crawlers/show.less";
+
+html {
+    /*height: 100%;*/
+}
+
+body {
+    width: inherit;
+    min-width: 800px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+    overflow: scroll;
+    position: relative;
+    height: 99%;
+}
+
+#errorExplanation {
+    h2 {
+        font-size: 1em;
+        color: red;
+    }
+    ul {
+        li {
+            line-height: 1.1em;
+            padding: 0;
+        }
+    }
+}
+
+#bd {
+}
+#view-container {
+    height: 600px;
+    clear:both;
+    position:relative;
+}
+#carousel-container {
+    height: 100%;
+    li {
+      float:left;
+      display:block;
+      height: 100%;
+    }
+    li.column { width:200px; }
+}
+.title {
+    background: transparent url(icons.png) no-repeat scroll;
+    padding: 2px 0 2px 20px;
+    color: #096BB3;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-bottom: 0;
+    line-height:18px;
+}
+.title.cine { background-position: 0 0px; }
+.title.teatro { background-position: 0 -18px; }
+.title.tv { background-position: 0 -36px; }
+.title.recitales { background-position: 0 -54px; }
+.title.sport { background-position: 0 -72px; }
+/*.title.recitales { background-position: 0 -90px; }*/
+.title.special { background-position: 0 -108px; }
+
+.event {
+    .title { padding: 0px 0 0px 20px; }
+}
+
+.clear { clear: both; }
+
+#col2 {
+    text-align: left;
+    margin:0; 
+    float: left;
+    h1, h2, h3 {
+        color: #666;
+        line-height: 34px;
+    }
+}
+
+.event .subheader {
+  margin-left: 20px;
+  width: 1000px;
+  color: #666666;
+  font-size: 85%;
+  white-space: nowrap;
+}
+
+
+.bar_tooltip {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  display: none;
+}
+/* Event */
+.event {
+    text-align: left;
+    .content {
+        margin: 9px 0;
+        label {
+            font-style: italic;
+            color: #666;
+        }
+    }
+    .description {
+        margin: 5px 0 9px;
+        h4 {
+          font-size: 123.1%;
+          font-weight: bold;
+          color: #666;
+        }
+    }
+    .image {
+        float: left;
+        border:1px solid #CCCCCC;
+        padding:2px;
+        margin: 0 15px 500px 5px;
+
+    }
+}
+
+/* Category */
+.category {
+    float: left;
+    font-size: 93%;
+    margin: 10px;
+    color: #666666;
+    overflow: hidden;
+    .title {
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+.category_title, .sub-category-item, .child-category-item {
+  white-space:nowrap;
+  overflow:hidden;
+}
+#view-button-prev-img, #view-button-next-img {
+  position: static;
+  margin: 10px;
+}
+#view-button-prev-img:focus, #view-button-next-img:focus {
+    outline: none;
+}
+#view-button-prev-img { float: left; }
+#view-button-next-img { float: right; }
+
+.jcarousel-container { }
+.jcarousel-clip-horizontal { margin: 0 20px; }
+.jcarousel-prev, .jcarousel-next {
+  width: 50px;
+  height: 50px;
+  border-color: red;
+  cursor:pointer;
+  display:none;
+  position:absolute;
+  height:395px;
+  top: 50px;
+}
+.jcarousel-prev:hover { background: transparent url(carousel-buttons.png) no-repeat scroll -101px center; }
+.jcarousel-next:hover { background: transparent url(carousel-buttons.png) no-repeat scroll -151px center; }
+.jcarousel-prev {
+  background:url("carousel-buttons.png") no-repeat scroll -1px center transparent;
+  left:11px;
+}
+.jcarousel-next {
+  background:url("carousel-buttons.png") no-repeat scroll -51px center transparent;
+  right:11px;
+}
+#carouselbar {
+    .tooltip {
+        padding: 2px 5px;
+        background:url("gradient-bottom.png") repeat-x scroll left bottom #EEEEEE;
+        border:1px solid #CCCCCC;
+        height:18px;
+        display: none;
+        position: absolute;
+        white-space:nowrap;
+        .title {
+            font-size: 93%;
+        }
+        .date {
+          color:#666666;
+          font-size:85%;
+          font-style:normal;
+          font-weight:bold;
+          line-height:18px;
+          margin-right:3px;
+        }
+    }
+}
+#carouselbarbox {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+}
+
+#carouselbarcontainer {
+    position: absolute;
+    span {display:block; float:left; width:3px; height:12px; margin: 1px;}
+    span.cine {background: #edd400;}
+    span.teatro {background: #73d216;}
+    span.tv {background: #ef2929;}
+    span.recitales {background: #f57900;}
+    span.sport {background: #729fcf;}
+    span.culture {background: #75507b;}
+    span.special {background: #204a87;}
+}
+#ft {
+  clear: both;
+}
+#viewzeroevents {
+    color: #666666;
+    display: table;
+    font-size: 100%;
+    font-style: normal;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    width: 800px;
+}
+#in_progress {
+    padding: auto;
+    position:absolute;
+    background-image: url("/images/75p_white.png");
+    z-index: 98; /* Should be lower than in_progress image has */
+    text-align: center;
+    vertical-align: middle;
+    img {
+        display: block;
+        z-index: 99; /* Should be lower than thirdbar */
+        position: absolute;
+        /* Setup vertical align */
+        height: 15px;
+        top: 50%;
+        margin-top: -8px; /* Correction on half of the size of the block */
+        /* Setup horizontal align */
+        width: 128px;
+        left: 50%;
+        margin-left: -64px; /* Correction on half of the size of the block */
+    }
+}
+#comments {
+    h4 {
+        color: #89B31F;
+        font-size: 123.1%;
+        font-weight: bold;
+        margin: 3px 0 9px;
+    }
+    .commentdiv {
+        margin: 5px;
+    }
+}
+#rating {
+    h4 {
+        #comments h4;
+    }
+}
+.switch_view {
+    z-index: 100;
+    float: right;
+    color: #666666;
+    padding: 8px 9px;
+    position: absolute;
+    right: 12px;
+    a {
+        background: url("mail-send-receive.png") no-repeat scroll 0 0 transparent;
+        color: #666666;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 93%;
+        font-weight: bold;
+        line-height: 18px;
+        margin-right: 3px;
+        padding-left: 20px;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}

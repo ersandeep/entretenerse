@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @sponsor.name %>
+</p>
+
+<p>
+  <b>Credit:</b>
+  <%=h @sponsor.credit %>
+</p>
+
+<p>
+  <b>Telephone:</b>
+  <%=h @sponsor.telephone %>
+</p>
+
+
+<%= link_to 'Edit', edit_sponsor_path(@sponsor) %> |
+<%= link_to 'Back', sponsors_path %>

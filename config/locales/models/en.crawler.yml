@@ -1,0 +1,7 @@
+en:
+  activerecord: 
+    attributes:
+      crawler:
+        name: Name
+        url: Start Page
+        selector: CSS3 or XPath expression

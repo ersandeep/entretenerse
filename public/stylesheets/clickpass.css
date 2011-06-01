@@ -1,0 +1,78 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+
+Title : Lightbox CSS
+Author : Kevin Hale
+URL : http://particletree.com/features/lightbox-gone-wild/
+
+Created : January 13, 2006
+Modified : February 1, 2006
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+#cp_lightbox_123{
+	display:none;
+	position: absolute;
+	top:50%;
+	left:50%;
+	z-index:20001;
+	width:505px;
+	height:600px;
+	margin:-290px 0 0 -250px;
+	border:0px solid #fff;
+	background: transparent;
+	text-align:left;
+}
+#cp_lightbox_123[id]{
+	position:fixed;
+}
+
+#cp_overlay_123{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:20000;
+	background-color:#000;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+}
+#cp_overlay_123[id]{
+	position:fixed;
+}
+
+#cp_lightbox_123.done #lbLoadMessage{
+	display:none;
+}
+#cp_lightbox_123.done #lbContent{
+	display:block;
+}
+#cp_lightbox_123.loading #lbContent{
+	display:none;
+}
+#cp_lightbox_123.loading #lbLoadMessage{
+	display:block;
+}
+
+#cp_lightbox_123.done img{
+	width:100%;
+	height:100%;
+}
+
+#clickpass_button #clickpass_dynamic_button {
+	display:block;
+}
+#clickpass_button #clickpass_static_button {
+	display:none;
+}
+
+#clickpass_button.static #clickpass_dynamic_button {
+	display:none;
+}
+#clickpass_button.static #clickpass_static_button {
+	display:block;
+}
+
+

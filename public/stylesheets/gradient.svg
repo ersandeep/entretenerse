@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="New document 1">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3598">
+      <stop
+         style="stop-color:#cccccc;stop-opacity:1;"
+         offset="0"
+         id="stop3600" />
+      <stop
+         style="stop-color:#cccccc;stop-opacity:0;"
+         offset="1"
+         id="stop3602" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3590">
+      <stop
+         style="stop-color:#cccccc;stop-opacity:1;"
+         offset="0"
+         id="stop3592" />
+      <stop
+         style="stop-color:#cccccc;stop-opacity:0;"
+         offset="1"
+         id="stop3594" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3598"
+       id="linearGradient3604"
+       x1="2.5"
+       y1="89.710175"
+       x2="2.5"
+       y2="110.71017"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.76190476,0,947.01157)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3598"
+       id="linearGradient3629"
+       gradientUnits="userSpaceOnUse"
+       x1="71.119286"
+       y1="135.18732"
+       x2="71.119286"
+       y2="114.18732"
+       gradientTransform="matrix(-1,0,0,-0.38095238,68.619282,-994.36225)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3598"
+       id="linearGradient3696"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-1,0,0,-0.38095238,68.619282,-994.36225)"
+       x1="71.119286"
+       y1="135.18732"
+       x2="71.119286"
+       y2="114.18732" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="9.9831221"
+     inkscape:cx="8.4142014"
+     inkscape:cy="10.180483"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3663"
+     showgrid="false"
+     inkscape:window-width="1199"
+     inkscape:window-height="698"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:none"
+       id="rect3606"
+       width="5.7435899"
+       height="6.2051282"
+       x="67.179489"
+       y="89.131416" />
+    <rect
+       y="1021.6813"
+       x="13.122148"
+       height="5"
+       width="5"
+       id="rect3651"
+       style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    <g
+       id="g3688"
+       transform="matrix(-1,0,0,-1,5.0000247,2062.7247)"
+       inkscape:export-filename="/Users/fetnelio/Documents/dev/nektra/entretenerse/sandbox/public/stylesheets/buttongradient.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         y="-1045.8622"
+         x="-5"
+         height="8"
+         width="5"
+         id="rect3690"
+         style="fill:url(#linearGradient3696);fill-opacity:1;stroke:none"
+         transform="scale(-1,-1)"
+         inkscape:export-filename="/Users/fetnelio/rect3588.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="1045.8622"
+         x="0"
+         height="6.5"
+         width="5"
+         id="rect3692"
+         style="fill:#cccccc;fill-opacity:1;stroke:none" />
+      <rect
+         y="1031.3625"
+         x="0"
+         height="6.5"
+         width="5"
+         id="rect3694"
+         style="fill:#ffffff;fill-opacity:0;stroke:none" />
+    </g>
+    <g
+       id="g3663"
+       inkscape:export-filename="/Users/fetnelio/Documents/dev/nektra/entretenerse/sandbox/public/stylesheets/buttongradient.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/fetnelio/Documents/dev/nektra/entretenerse/sandbox/public/stylesheets/buttongradient.png"
+         transform="scale(-1,-1)"
+         style="fill:url(#linearGradient3629);fill-opacity:1;stroke:none"
+         id="rect3627"
+         width="5"
+         height="8"
+         x="-5"
+         y="-1045.8622" />
+      <rect
+         style="fill:#cccccc;fill-opacity:1;stroke:none"
+         id="rect3636"
+         width="5"
+         height="6.5"
+         x="0"
+         y="1045.8622"
+         inkscape:export-filename="/Users/fetnelio/Documents/dev/nektra/entretenerse/sandbox/public/stylesheets/buttongradient.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         style="fill:#ffffff;fill-opacity:0;stroke:none"
+         id="rect3653"
+         width="5"
+         height="6.5"
+         x="0"
+         y="1031.3625"
+         inkscape:export-filename="/Users/fetnelio/Documents/dev/nektra/entretenerse/sandbox/public/stylesheets/buttongradient.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+    </g>
+  </g>
+</svg>

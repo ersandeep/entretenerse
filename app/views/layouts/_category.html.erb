@@ -1,0 +1,56 @@
+<div class="category">
+  <div class="category-item">
+    <span id="category_title">
+    <%= link_to h(category.value), {
+      :controller => :login,
+      :action => :index,
+      :category => category.to_param },
+      :class => "title #{category.value.downcase}",
+      :"data-category" => category.id %> 
+    <% if params[:counts] %>
+      <span>(<%= category.occurrences_count %>)</span>
+    <% end %>
+    </span>
+  </div>
+  <% category.leafs.each do |subcategory| %>
+    <div class="subcategory">
+      <div class="sub-category-item">
+        <%= link_to h(subcategory.value), {
+          :controller => :login,
+          :action => :index,
+          :top_category => category.to_param,
+          :category => subcategory.to_param },
+          :style => "font-weight: bold;",
+          :class => "",
+          :"data-category" => subcategory.id %>
+        <% if params[:counts] %>
+          <span>(<%= subcategory.occurrences_count %>)</span>
+        <% end %>
+      </div>
+
+      <% (subcategory.leafs.length / 4 + 1).times do |time| %>
+      <ul>
+        <% subcategory.leafs.slice(time * 4, 4).each do |child| %>
+          <li>
+            <div class="child-category-item">
+              <%=link_to h(child.value), {
+                :controller => :login,
+                :action => :index,
+                :top_category => category.to_param,
+                :sub_category => subcategory.to_param,
+                :category => child.to_param },
+                :class => "",
+                :style => @category && @category.id == child.id ? "font-weight: bold;" : "",
+                :"data-category" => child.id %> 
+              <% if params[:counts] %>
+                <span>(<%= child.occurrences_count %>)</span>
+              <% end %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    </div>
+  <% end %>
+</div>

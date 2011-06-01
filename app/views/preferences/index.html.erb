@@ -1,0 +1,26 @@
+<h1>Listing preferences</h1>
+
+<table>
+  <tr>
+    <th>Rank</th>
+    <th>Attribute</th>
+    <th>Value</th>
+    <th>User</th>
+  </tr>
+
+<% for preference in @preferences %>
+  <tr>
+    <td><%=h preference.rank %></td>
+    <td><%=h preference.attribute.name %></td>
+    <td><%=h preference.attribute.value %></td>
+    <td><%=h preference.user.name %></td>
+    <td><%= link_to 'Show', preference %></td>
+    <td><%= link_to 'Edit', edit_preference_path(preference) %></td>
+    <td><%= link_to 'Destroy', preference, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New preference', new_preference_path %>

@@ -1,0 +1,46 @@
+en:
+  crawlers:
+      index:
+        title: Crawlers
+        crawler: Crawler
+        no_crawlers: There is no crawlers configured yet.
+        add_one: Add One Now
+        not_available: N/A
+        source: source
+        view_history: view history
+        edit: Edit
+        activate: Activate
+        deactivate: Deactivate
+        run_now: Run Now
+        activated: Crawler "%{name}" activated and will run according to schedule next time.
+        deactivated: Crawler "%{name}" deactivated and will not run next time.
+        started: Crawler "%{name}" started right now.
+        running: Running
+      create:
+          title: Configure New Crawler (Step 1)
+          url: Home Page
+          name: Crawler Name
+      edit:
+          title: Configure Crawler "%{name}" (Step 2)
+          notice: 
+          step: Step %{number}
+          select_action: "Select Action ..."
+          then: Then
+          expression: Enter XPath or CSS Expression
+          add_step: Add Step
+          done: I am Done!
+          first_step: Open %{url} to crawl
+      show:
+          start_now: Start Now
+          stop_now: Stop Now
+          resume_now: Resume Now
+          reset_now: Reset
+          view_config: View Config
+          stop_confirm: Please confirm you want to stop the crawler and all related jobs.
+          start_confirm: Start the crawler right now?
+          resume_confirm: Resume the crawler?
+          reset_confirm: Reset the crawler? All crawled info will be lost.
+          proceed: Proceed Now
+          proceed_tooltip: Proceed with the entry right now.
+          restart: Restart
+          restart_tooltip: Restart the entry from pull action.

@@ -1,0 +1,15 @@
+en-US:
+    navigation:
+      default:                  # The name of your navigation menu
+        home:                   # The name of your tab
+          title: "Home"         # The title of your tab
+          menus:
+            index: "Dashboard"  # The title for index action menu
+            new: "New Page"     # The title for new action menu
+    navigation:
+      nektra:                  # The name of your navigation menu
+        home:                   # The name of your tab
+          title: "Home"         # The title of your tab
+          menus:
+            index: "Dashboard"  # The title for index action menu
+            new: "New Page"     # The title for new action menu

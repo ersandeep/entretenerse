@@ -1,0 +1,65 @@
+es:
+    # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
+    datetime:
+      distance_in_words:
+        half_a_minute: "medio minuto"
+        less_than_x_seconds:
+          one: "menos de 1 segundo"
+          other: "menos de %{count} segundos"
+        x_seconds:
+          one: "1 segundo"
+          other: "%{count} segundos"
+        less_than_x_minutes:
+          one: "menos de 1 minuto"
+          other: "menos de %{count} minutos"
+        x_minutes:
+          one: "1 minuto"
+          other: "%{count} minutos"
+        about_x_hours:
+          one: "alrededor de 1 hora"
+          other: "alrededor de %{count} horas"
+        x_days:
+          one: "1 día"
+          other: "%{count} días"
+        about_x_months:
+          one: "alrededor de 1 mes"
+          other: "alrededor de %{count} meses"
+        x_months:
+          one: "1 mes"
+          other: "%{count} meses"
+        about_x_years:
+          one: "alrededor de 1 año"
+          other: "alrededor de %{count} años"
+        over_x_years:
+          one: "más de 1 año"
+          other: "más de %{count} años"
+      prompts:
+        year: "Año"
+        month: "Mes"
+        day: "Día"
+        hour: "Hora"
+        minute: "Minutos"
+        second: "Segundos"
+
+    date:
+      formats:
+        # Use the strftime parameters for formats.
+        # When no format has been given, it uses default.
+        # You can provide other formats here if you like!
+        default: "%Y-%m-%d"
+        short: "%b %d"
+        long: "%B %d, %Y"
+        title: '%A %d of %B'
+
+      day_names: [Domingo, Lunes, Martes, Miércoles, Jueves, Viernes, Sábado]
+      abbr_day_names: [Domingo, Lunes, Martes, Miércoles, Jueves, Viernes, Sábado]
+
+      # Don't forget the nil at the beginning; there's no such thing as a 0th month
+      month_names: [~, Enero, Febrero, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
+      abbr_month_names: [~, Enero, Febrero, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
+      # Used in date_select and datime_select.
+      order: [ :year, :month, :day ]
+    time:
+      formats:
+        title: '%A %d de %B'
+

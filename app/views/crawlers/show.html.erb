@@ -1,0 +1,62 @@
+<div id="crawlers_history">
+  <h1>"<%= @crawler.name %>" Crawling History</h1>
+  <div class="header_info">
+    <%= link_to @crawler.url, @crawler.url, :target => '_blank' %>
+    - currently <%= @crawler.status %> and
+      <% if @crawler.running? %>
+        running
+        <%= link_to t('.stop_now'), stop_crawler_path(@crawler), :method => :post, :confirm => t('.stop_confirm'), :id => 'stop_crawler' %>
+      <% elsif @crawler.stopped? -%>
+        not running.
+        <%= link_to t('.resume_now'), start_crawler_path(@crawler), :method => :post, :confirm => t('.resume_confirm'), :id => 'resume_crawler' %>
+        /
+        <%= link_to t('.reset_now'), reset_crawler_path(@crawler), :method => :post, :confirm => t('.reset_confirm'), :id => 'resume_crawler' %>
+      <% else -%>
+        not running.
+        <%= link_to t('.start_now'), start_crawler_path(@crawler), :method => :post, :confirm => t('.start_confirm'), :id => 'start_crawler' %>
+      <% end -%>
+    <%= t(:or) %>
+    <%= link_to t(".view_config"), configuration_crawler_path(@crawler), :rel => '#config_dialog', :id => 'view_config' %>
+  </div>
+  <table>
+    <tr>
+      <th style="text-align:center;">id</th>
+      <th width="95%">Log Entry</th>
+    </tr>
+    <% @log_entries.each do |entry| -%>
+    <tr>
+      <td style="text-align:center;vertical-align:top;"><%= entry.id %></td>
+      <td>
+        <%= entry.status.to_s.capitalize %>
+        <%= link_to entry.url, entry.url, :target => '_blank' %>
+        <%= link_to("view content", "#") unless entry.content.blank? %>
+        <div class="subheader">
+          <% if entry.status == :pull -%>
+            with corresponding
+            <%= link_to "config", crawler_log_path(entry), :'data-config' => 'true', :rel => '#config_dialog' %>
+          <% elsif entry.status == :push -%>
+            with <%= link_to "pull data", pull_data_crawler_log_path(entry), :'data-pull' => 'true', :rel => '#config_dialog' %>
+          and inherited <%= link_to "push data", push_data_crawler_log_path(entry) , :'data-push' => 'true', :rel => '#config_dialog'%>
+          <% end -%>
+          <div style="float:right">
+            <%= link_to t('.proceed'), proceed_crawler_log_path(entry, :page => params[:page]), :method => :post, :title => t('.proceed_tooltip') %>
+            or
+            <%= link_to t('.restart'), restart_crawler_log_path(entry), :method => :post, :title => t('.restart_tooltip') %>
+          </div>
+          <%# entry.pull_data %>
+          <%# entry.push_data %>
+          <%# entry.content %>
+          <%# entry.parent %>
+        </div>
+      </td>
+    </tr>
+    <% end -%>
+  </table>
+  <%= will_paginate @log_entries %>
+  <div id="config_dialog">
+    <div id="config_content">
+    </div>
+    <%= link_to t(:button_cancel), '#', :id => 'close_config' %>
+    <%= submit_tag t(:button_save), :onclick => 'javascript:$("#config_content form").submit();return false;' %>
+  </div>
+</div>

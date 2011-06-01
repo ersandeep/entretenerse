@@ -1,0 +1,199 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+es:
+    hello: "Hello world"
+    
+    or: or
+    site: "Eventos y Espectaculos En Buenos Aires - Descuentos Cines Teatro"
+    turn_on_javascript: "El sitio funciona mejor con Javascript activado."
+    loading: "Cargando, espere por favor..."
+    loading_too_long: "Ups! Parece que la p&aacute;gina esta tardando demasiado en cargar."
+    welcome : "Bienvenido"
+    search_tip : "Peliculas, Recitales, Futbol..."
+    filters: "Filtros"
+    filters_tooltip: "Presione para contraer el panel."
+    filter_date: "x Fecha"
+    as_exp: "Por ej:"
+    today: "Hoy"
+    tomorrow: "Ma&ntilde;ana"
+    weekend: "Este Finde"
+    week: "Esta Semana"
+    month: "Este Mes"
+    customhint: "Otra Fecha"
+
+    refine_by: "Filtrar por:"
+
+    filter_calendar_hint_1: "HOY"
+    filter_calendar_hint_2: "MA&Ntilde;A"
+    filter_calendar_hint_3: "SEMA"
+    filter_calendar_hint_4: "FIND"
+    filter_calendar_hint_5: "MES"
+        
+    filter_time: "x Horario"
+    filter_misc: "Misc"        
+    also_in: "Tambi&eacute;n en BA!"
+    sponsors: "Auspiciantes"
+    credits: "Cr&eacute;ditos"
+    publicity: "Espacio de Publicidad"
+    
+    results: "Resultados"
+    results_of: "de"
+    preferedlabelprefix: "en"
+    preferedlabel: "Categor&iacute;as Preferidas"
+    show_others: "Ver m&aacute;s..."
+    hide_others: "Ver menos..."
+    zeroevents: "No se encontraron resultados! Intenta otra una consulta"
+    order_by_horario: "Ordenar x Horario"
+    order_by_horario_min: "x Horario"
+    order_by_rating: "Ordenar x Ranking"
+    order_by_rating_min: "x Ranking"
+    order_by_category: "Ordenar x Categor&iacute;a"
+    order_by_category_min: "x Categor&iacute;a"
+    
+    switchview_sort_date: "Cambiar a vista Calendario"
+    switchview_sort_category: "Cambiar a vista Categor&iacute;a" 
+    
+    date_fromto: ", {{dateFrom}} al {{dateTo}}"
+    date_of: "de"
+
+    show_older: "Mostrar Eventos ya empezados"
+    hide_older: "Ocultar Eventos ya empezados"
+    label_older: "Ya empezados..."    
+
+    next: "Next >"
+    admin:
+        categories:
+            select_one: Seleccione la categoría en la parte superior para modificarlo.
+
+    comments:
+        title: T&iacute;tulo
+        text: Comentario
+        publish_button: Publicar
+        header: Dejanos tu comentario!
+        message_login: Tenes que loguearte para comentar 
+    
+    button_save: "Guardar"
+    button_cancel: "Cancelar"
+    button_search: "Buscar"
+    button_switch: "Mostrar Asistente de B&uacute;squeda"
+    show_searchoptions: "Mostrar Asistente de B&uacute;squeda"
+    hide_searchoptions: "Ocultar Asistente de B&uacute;squeda"
+    wizardclose: "Cerrar"
+       
+    preferences: "Preferencias"
+    options_all: "Todos"
+    activate_all: "Activar"
+    deactivate_all: "Desactivar"
+    disallow_all: "Suprimir"
+    preferences_show: "Mostrar Preferencias"
+    edit_preferences: "Editar Preferencias"
+    cat_in_limbo: "Categor&iacute;as en el Limbo"
+    
+    titlebarhome: "Inicio"
+    cleanallthismess: "Limpiar este desastre y comenzar de nuevo"
+        
+    rating_1: "Malo"
+    rating_2: "Aburrido"
+    rating_3: "Bueno"
+    rating_4: "Muy Bueno"
+    rating_5: "Excelente"
+
+    error_loading: "Ups! Ha aparecido un error inesperado."
+    error_retry: "Espere unos instantes e intente nuevamente" 
+    error_101: "Error en la carga de las preferencias"
+    error_102: "Error en la carga del men&uacute; de filtros"
+    error_103: "Error en la carga de los eventos sugeridos"
+    error_104: "Error en la carga de las cantidades de eventos"
+    error_105: "Error en la carga de los eventos"
+    error_106: "Error en la carga del detalle del evento"
+    error_107: "Error en la carga del calendario"
+    error_108: "Error al guardar los cambios de las preferencias"
+    error_109: "Error en la carga del asistente de b&uacute;squeda"
+
+    text_credits: "<h2>Cr&eacute;ditos</h2><p><h3>ENTRETENERSE.COM.AR</h3><h4>Lic. Pablo Yabo</h4>LIDER DE PROYECTO<br/><h4>Sebasti&aacute;n Ra&uacute;l Wain</h4>IDEA GENERAL, INVESTIGACI&Oacute;N DE MERCADO, DISE&Ntilde;O, DESARROLLO<br/><h4>Ing. Ariel Yabo</h4>MARKETING Y PROMOCI&Oacute;N<br/><h4>7puentes.com</h4>DESARROLLO WEB, VISUALIZACI&Oacute;N<br/><br/>Todas las marcas registradas que se mencionan en este sitio Web son propiedad de sus respectivos due&ntilde;os. Esta p&aacute;gina puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se cite la fuente completa y su direcci&oacute;n electr&oacute;nica (C) 2010 Entretenerse.com.ar"
+    text_sponsors: "<h2>Informaci&oacute;n para Auspiciantes</h2><p>Comuniquese con...</p>"
+
+    event_detail: "Detalle del Evento"
+    event_description: "Descripci&oacute;n"
+    event_duration: "Duraci&oacute;n {{duration}} m&iacute;n."
+    event_place: "Lugar"
+    event_hours: "Horario/s"
+    event_sponsored: "Evento Promocionado"
+    event_other_places: "Ver otras funciones"
+    event_other_shows: "Otras funciones"
+    event_rating: "Rating"
+    event_comments: "Comentarios"
+    event_disqus_offline: "Ver thread the discusi&oacute;n."
+    
+    options: "Opciones generales"
+    options_refresh: "Actualizar vista"
+    
+    category_show_this: "Mostrar esta categor&iacute;a"
+    category_show_only_this: "Mostrar s&oacute;lo esta categor&iacute;a"
+    category_hide_this: "Enviar esta categor&iacute;a al limbo"
+    category_menu: "Ver las opciones de esta ategor&iacute;a"
+    gohome: "Empezar todo de nuevo"
+    cleanquery: "Eliminar esta consulta"
+    cleancat: "Eliminar esta categor&iacute;a"    
+    
+    filter_by: "Filtrar x "
+    filter_all: "Todos"
+    filter_none: "Ninguno"
+    
+    price_free: "Gratis"
+    time_past: "atr&aacute;s"
+
+    back: "< Vuelta"
+
+    navigation:
+      default:                  # The name of your navigation menu
+        home:                   # The name of your tab
+          title: "Home"         # The title of your tab
+          menus:
+            index: "Dashboard"  # The title for index action menu
+            new: "New Page"     # The title for new action menu
+    navigation:
+      nektra:                  # The name of your navigation menu
+        users:                   # The name of your tab
+          title: "Users"         # The title of your tab
+        preferences:                   # The name of your tab
+          title: "User Preferences"         # The title of your tab
+        campaign_types:                   # The name of your tab
+          title: "Campaign Types"         # The title of your tab
+        sponsors:                   # The name of your tab
+          title: "Event Sponsors"         # The title of your tab
+        tags:                   # The name of your tab
+          title: "Event Tags"         # The title of your tab
+        targets:                   # The name of your tab
+          title: "Targets"         # The title of your tab
+        attributes:                   # The name of your tab
+          title: "Attribute"         # The title of your tab
+        events:                   # The name of your tab
+          title: "Events"         # The title of your tab
+        performers:                   # The name of your tab
+          title: "Perormers"         # The title of your tab
+        places:                   # The name of your tab
+          title: "Places"         # The title of your tab
+        calendars:                   # The name of your tab
+          title: "Holidays"         # The title of your tab
+      default:                  # The name of your navigation menu
+        users:                   # The name of your tab
+          title: "Users"         # The title of your tab
+        preferences:                   # The name of your tab
+          title: "User Preferences"         # The title of your tab
+        campaign_types:                   # The name of your tab
+          title: "Campaign Types"         # The title of your tab
+        sponsors:                   # The name of your tab
+          title: "Event Sponsors"         # The title of your tab
+        tags:                   # The name of your tab
+          title: "Event Tags"         # The title of your tab
+        targets:                   # The name of your tab
+          title: "Targets"         # The title of your tab
+        attributes:                   # The name of your tab
+          title: "Attribute"         # The title of your tab
+        events:                   # The name of your tab
+          title: "Events"         # The title of your tab
+        performers:                   # The name of your tab
+          title: "Perormers"         # The title of your tab
+

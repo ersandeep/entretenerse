@@ -1,0 +1,38 @@
+<p>
+  <b>Name:</b>
+  <%=h @place.name %>
+</p>
+
+<p>
+  <b>Town:</b>
+  <%=h @place.town %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @place.state %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%=h @place.country %>
+</p>
+
+<p>
+  <b>Lat:</b>
+  <%=h @place.lat %>
+</p>
+
+<p>
+  <b>Long:</b>
+  <%=h @place.long %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @place.address %>
+</p>
+
+
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %>

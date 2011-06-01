@@ -1,0 +1,44 @@
+xml = parent_xml unless parent_xml.nil?
+xml.event {
+  xml.id(event.id)
+  xml.title(event.title)
+  xml.category(event.category)
+  xml.categoryid(event.category_id)
+
+  if event.labels.length > 0
+    xml.text(event.labels.first.value)
+  end
+  
+  xml.description(event.description)
+  
+  if event.occurrences != nil && event.occurrences.length > 0
+    xml.occurrenceid(event.occurrences[0].id)
+    xml.place(event.occurrences[0].place.name)
+    xml.hour(event.occurrences[0].hour.to_time.strftime('%H:%M'))
+  end
+
+  xml.image(event.image_url)
+
+ if (event.id % 10) < 2
+    xml.ctype "R"
+  elsif (event.id % 10) < 4
+    xml.ctype "I"
+  elsif (event.id % 10) < 6
+    xml.ctype "A"
+  else
+    xml.ctype "N"
+  end
+
+  
+  if (show_occurrences)
+    xml.occurrences do
+     for occurrence in event.occurrences
+      render( :partial => "occurrence", 
+              :layout => false,
+              :locals => {:parent_xml => xml,
+                          :occurrence => occurrence})
+      end
+    end
+  end
+  
+}

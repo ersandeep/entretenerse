@@ -1,0 +1,199 @@
+html {background-color:#F9F9F9;}
+
+#doc3 {margin: auto;}
+div.c {position:relative; display:block; margin:0pt auto; width:960px;} /*poner width:1260px para fluid*/
+
+#mb {
+background:#EEEEEE url(http://mootools.net/assets/images/gradient-bottom.png) repeat-x scroll left bottom;
+border-bottom: 1px solid #CCCCCC;
+border-top: 1px solid #CCCCCC;
+padding: 0.3em 0;
+}
+
+#bd	
+{background:#F4F5F5 url(http://mootools.net/assets/images/gradient.png) repeat-x scroll left top;}
+
+.yui-skin-sam .yui-button button {
+color:#000000;
+font-size:85%;
+padding-left:0;
+}
+
+#filter-top-bar button em {
+    padding-left: 21px;
+    height: 18px;
+    margin: 2px 0px 2px 1px;
+    display: block;
+    font-style: normal;
+		line-height:16px;
+		white-space: nowrap;
+		width: 70px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-align:left;    
+}
+
+/*fam fam
+button em.movies {background:transparent url(film.png) no-repeat scroll;}
+button em.theatre {background:transparent url(wand.png) no-repeat scroll;}
+button em.tv {background:transparent url(television.png) no-repeat scroll;}
+button em.music {background:transparent url(music.png) no-repeat scroll;}
+button em.sport {background:transparent url(sport_soccer.png) no-repeat scroll;}
+button em.culture {background:transparent url(palette.png) no-repeat scroll;}
+button em.special {background:transparent url(star.png) no-repeat scroll;}
+*/
+#filter-top-bar button em.more {
+		width: auto;
+    background:transparent url(list-add.png) no-repeat scroll;}
+
+#filter-top-bar .menuitem-default {
+font-weight: bold
+}
+
+
+/*5411*/
+#filter-top-bar button em.movies {background:transparent url(icons.png) no-repeat scroll; background-position:0 0px;}
+#filter-top-bar button em.theatre {background:transparent url(icons.png) no-repeat scroll; background-position:0 -18px;}
+#filter-top-bar button em.tv {background:transparent url(icons.png) no-repeat scroll; background-position:0 -36px;}
+#filter-top-bar button em.music {background:transparent url(icons.png) no-repeat scroll; background-position:0 -54px;}
+#filter-top-bar button em.sport {background:transparent url(icons.png) no-repeat scroll; background-position:0 -72px;}
+#filter-top-bar button em.culture {background:transparent url(icons.png) no-repeat scroll; background-position:0 -90px;}
+#filter-top-bar button em.special {background:transparent url(icons.png) no-repeat scroll; background-position:0 -108px;}
+
+
+/*Calendario*/
+.yui-skin-sam .yui-calcontainer {background:#F4F5F5; border-color:#CCCCCC;}
+.yui-skin-sam .yui-calendar thead {font-size:93%; }
+.yui-skin-sam .yui-calendar .calnavright, 
+.yui-skin-sam .yui-calendar .calnavleft {z-index:0;}
+.yui-skin-sam .yui-calendar tbody {font-size:85%; }
+.yui-skin-sam .yui-calendar td.wd6 { background:#FFFFCC; }
+.yui-skin-sam .yui-calendar td.wd0 { background:#FFFFCC; }
+
+#calendar-hints {font-size:85%;color:#666666;}
+#calendar-hints span {color:#666666; text-decoration:none; font-style:italic; cursor:pointer;}
+#calendar-hints span:hover {text-decoration:underline; color:#F0B962;}
+
+
+p.hint{
+color:#666666;
+font-weight:normal;
+line-height:1.5em;
+padding:0pt;
+text-align:left;
+font-size:85%;
+margin:0;
+position:relative;
+clear:both;
+display:block;
+}
+
+
+
+/*Slider*/
+#slider-bg {background:url(slider-bg-2.png) 0px 0 no-repeat;
+height:28px;
+width:176px;
+}
+
+/*View*/
+#view-container {
+overflow:hidden;
+height: 400px;
+width: 540px; /*comentar esta linea para fluid*/
+margin:auto;
+display: block;
+border-left: 1px solid #CCCCCC;
+border-right: 1px solid #CCCCCC;
+padding:0 12px;
+}
+
+#view {
+position:relative;
+height: 400px;
+width: 10000px;
+-moz-column-width: 160px;
+-moz-column-gap: 25px;
+-moz-column-rule: 1px solid #CCCCCC;
+}
+
+
+#view-header {margin:9px 0; overflow:hidden;}
+#view-header h3 {color:#096BB3; font-size:123.1%; float:left; display:inline; margin:5px 0;}
+#order-by-bar {float:right; display:inline; margin: 6px 3px;}
+
+#order-by-bar button em {
+    padding-left: 21px;
+    height: 18px;
+    margin: 2px 0px 2px 1px;
+    display: block;
+    font-style: normal;
+		line-height:16px;
+		white-space: nowrap;
+		width: auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-align:left;    
+}
+
+#order-by-bar button em.hour {background:transparent url(time.png) no-repeat scroll;}
+#order-by-bar button em.ranking {background:transparent url(star.png) no-repeat scroll;}
+#order-by-bar button em.category {background:transparent url(sport_soccer.png) no-repeat scroll;}
+	
+#order-by-bar .menuitem-default {
+font-weight: bold
+}
+
+
+/*#order-by-bar span {margin:0 3px; padding: 2px 8px; cursor:pointer; background-color:#ddd; color:#666; text-decoration:none; -moz-border-radius: 4px;}
+#order-by-bar span.sel {background-color:#C3DEE8; color:#374859;}
+#order-by-bar span:hover {text-decoration:underline;}
+*/
+
+/*entries*/
+.entry:hover {background: #EDF3DA;}
+.entry {margin-bottom:9px; clear:both;}
+.entry .tit {font-size: 93%; color:#096BB3; font-weight:normal;}
+.entry .hashour{}
+.entry .tit .hour {font-size: 85%; color:#666; font-weight:bold; margin:0 3px 0 0; float:left; line-height:18px; display:block;}
+.entry .tit .delimiter {margin: 0 0 0 33px; width:162px; overflow:hidden; text-overflow:ellipsis; cursor:pointer;}
+.entry .tit h6 {padding-left:20px; width:10000px; line-height:18px;}
+.entry .tit h6:hover {text-decoration:underline;}
+
+
+.entry p.tagline {font-size: 85%; color:#666; margin: 0 0 0 33px;/*display:none;*/}
+.entry p.tagline span {cursor:pointer;}
+.entry p.tagline span:hover {text-decoration:underline; color:#F0B962;}
+.entry p.tagline .genre {}
+.entry p.tagline .venue {}
+
+.tit h6.movies {background:transparent url(icons.png) no-repeat scroll; background-position:0 0px;}
+.tit h6.theatre {background:transparent url(icons.png) no-repeat scroll; background-position:0 -18px;} 
+.tit h6.tv {background:transparent url(icons.png) no-repeat scroll; background-position:0 -36px;}      
+.tit h6.music {background:transparent url(icons.png) no-repeat scroll; background-position:0 -54px;}   
+.tit h6.sport {background:transparent url(icons.png) no-repeat scroll; background-position:0 -72px;}   
+.tit h6.culture {background:transparent url(icons.png) no-repeat scroll; background-position:0 -90px;} 
+.tit h6.special {background:transparent url(icons.png) no-repeat scroll; background-position:0 -108px;}
+
+/*entriespictures	*/
+.entrypicture:hover {background: #EDF3DA;}
+.entrypicture {margin-bottom:9px; clear:both;}
+.entrypicture .tit {font-size: 93%; color:#096BB3; font-weight:normal;}
+.entrypicture .hashour{}
+.entrypicture .tit .hour {font-size: 85%; color:#666; font-weight:bold; margin:0 3px 0 0; float:left; line-height:18px; display:block;}
+.entrypicture .tit .delimiter {margin: 0 0 0 33px; width:151px; overflow:hidden; text-overflow:ellipsis; cursor:pointer;}
+.entrypicture .tit h6 {padding-left:20px; width:10000px; line-height:18px;}
+.entrypicture .tit h6:hover {text-decoration:underline;}
+
+
+.entrypicture p.tagline {font-size: 85%; color:#666; margin: 0 0 0 33px;/*display:none;*/}
+.entrypicture p.tagline span {cursor:pointer;}
+.entrypicture p.tagline span:hover {text-decoration:underline; color:#F0B962;}
+.entrypicture p.tagline .genre {}
+.entrypicture p.tagline .venue {}
+
+.entrypicture .ima img {border:1px solid #CCCCCC; padding:2px; margin:auto;}
+
+
+/******************/
+.hidden {display:none;}
